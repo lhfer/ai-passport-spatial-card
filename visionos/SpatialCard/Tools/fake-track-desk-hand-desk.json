@@ -1,0 +1,30 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 6.5, "position": [0, 1.05, -0.6], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.042,
+   "note": "1 desk: flat and still on a detected plane 8 mm below (expect [obj] box ... normal axis Z, absent -> acquiring -> expanded (cinematic) and [notes] fan out 10 cards). V3-2b B0a: 6.5 s, not 5 s -- the recognition scan holds the entrance to its 1.05 s beat, so the gallery needs until ~5.4 s to be out before the first pick-up can play the morph"},
+
+  {"fromSeconds": 6.5, "toSeconds": 7.1, "position": [0, 1.05, -0.6], "toPosition": [0.06, 1.22, -0.65],
+   "eulerDeg": [0, 0, 0], "toEulerDeg": [60, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 5.0, "surfaceY": 1.042,
+   "note": "2 picked up at 0.31 m/s, tilting to 60 deg (expect [obj] desk gate -> hand, expanded -> carrying, [reveal] pick-up morph with the scan on, [reveal] hand form)"},
+  {"fromSeconds": 7.1, "toSeconds": 10.5, "position": [0.06, 1.22, -0.65], "toPosition": [0.16, 1.24, -0.6],
+   "eulerDeg": [60, 0, 0], "toEulerDeg": [55, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "3 in the hand, drifting slowly: still by speed but nowhere near flat, so the desk gate must NOT let it back"},
+  {"fromSeconds": 10.5, "toSeconds": 13.5, "position": [0.16, 1.24, -0.6], "toPosition": [-0.02, 1.2, -0.66],
+   "eulerDeg": [55, 0, 0], "toEulerDeg": [62, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "4 carried across (expect no ignoring detection, outliers=0, a Sigma lag= in the low tens of mm and deckLag= under 35 mm)"},
+  {"fromSeconds": 13.5, "toSeconds": 15.5, "position": [-0.02, 1.2, -0.66], "toPosition": [0.1, 1.1, -0.62],
+   "eulerDeg": [62, 0, 0], "toEulerDeg": [55, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "5 brought back down towards the desk, still tilted"},
+
+  {"fromSeconds": 15.5, "toSeconds": 16.1, "position": [0.1, 1.1, -0.62], "toPosition": [0.22, 1.05, -0.58],
+   "eulerDeg": [55, 0, 0], "toEulerDeg": [0, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 2.0, "surfaceY": 1.042,
+   "note": "6 put back down flat, 22 cm from where it started"},
+  {"fromSeconds": 16.1, "toSeconds": 21.5, "position": [0.22, 1.05, -0.58], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.042,
+   "note": "7 desk again: still on the plane (expect [obj] desk gate -> desk within 1 s, carrying -> settling -> expanded (settled), [notes] fan out 10 cards)"},
+
+  {"fromSeconds": 21.5, "toSeconds": 22.1, "position": [0.22, 1.05, -0.58], "toPosition": [0.28, 1.21, -0.62],
+   "eulerDeg": [0, 0, 0], "toEulerDeg": [60, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 5.0, "surfaceY": 1.042,
+   "note": "8 picked up again (expect the hand form back, the SECOND [reveal] pick-up morph, second [obj] desk gate -> hand)"},
+  {"fromSeconds": 22.1, "toSeconds": 27.0, "position": [0.28, 1.21, -0.62], "toPosition": [0.2, 1.23, -0.58],
+   "eulerDeg": [60, 0, 0], "toEulerDeg": [58, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "9 held in the hand to the end of the run (--exit-after 28)"}
+]

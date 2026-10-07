@@ -1,0 +1,105 @@
+{
+  "id": "data-nebula",
+  "name": "数据星云",
+  "subtitle": "熄灯失重，4313 颗星从名片喷出，你的数据成为星座",
+  "icon": "sparkles",
+  "palette": {
+    "background": "#0A0B2E",
+    "primary": "#7A5CFF",
+    "secondary": "#3EE8C8",
+    "highlight": "#F2F0FF",
+    "accent": "#FFD36E"
+  },
+  "immersion": {
+    "shellOpacity": 1.0,
+    "shellColor": "#03031A"
+  },
+  "entry": {
+    "kind": "lightsOut",
+    "duration": 3.8
+  },
+  "exit": {
+    "kind": "dawn",
+    "duration": 3.0
+  },
+  "audio": {
+    "ambient": "worldSpaceAmbient",
+    "entry": "powerDown",
+    "exit": "dawn"
+  },
+  "exitLabel": "黎明",
+  "hologramTint": "#7A5CFF",
+  "environment": {
+    "hdri": "moonless_golf_1k",
+    "iblIntensity": 0.25,
+    "sky": "star_sky",
+    "skyTint": "#8890C0",
+    "skyRadius": 34,
+    "skyOnShell": false
+  },
+  "textures": [
+    "moon_01_Diffuse_2k",
+    "moon_01_nor_gl_2k"
+  ],
+  "stats": {
+    "starsMin": 500,
+    "starsMax": 20000,
+    "celebrateCap": 300
+  },
+  "take": {
+    "cometPeriod": 18,
+    "cometFirst": 4,
+    "heroAt": 3.5,
+    "heroTilt": 14
+  },
+  "placements": [
+    {
+      "asset": "star_satelliteDish",
+      "at": [
+        16,
+        -13,
+        -2
+      ],
+      "yaw": 40,
+      "scale": 1.8,
+      "minTier": 0
+    },
+    {
+      "asset": "star_satelliteDish",
+      "at": [
+        21,
+        18,
+        5
+      ],
+      "yaw": 140,
+      "scale": 1.6,
+      "minTier": 0
+    },
+    {
+      "asset": "star_rock_crystals",
+      "at": [
+        9,
+        -9,
+        -7
+      ],
+      "yaw": 20,
+      "scale": 2.2,
+      "minTier": 1
+    }
+  ],
+  "fog": [
+    {
+      "distance": 12,
+      "height": 40,
+      "color": "#120A3A",
+      "opacity": 0.14
+    },
+    {
+      "distance": 22,
+      "height": 60,
+      "color": "#0A0630",
+      "opacity": 0.2,
+      "minTier": 1
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+[
+ {
+  "fromSeconds": 0.0,
+  "toSeconds": 3.0,
+  "position": [
+   0,
+   1.05,
+   -0.72
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 0.5,
+  "surfaceY": 1.042,
+  "note": "1 flat on the desk, still (expect [obj] box centre ... then absent -> acquiring -> expanded (cinematic), src=obj)"
+ },
+ {
+  "fromSeconds": 3.0,
+  "toSeconds": 3.6,
+  "position": [
+   0,
+   1.05,
+   -0.72
+  ],
+  "toPosition": [
+   0.06,
+   1.22,
+   -0.8
+  ],
+  "eulerDeg": [
+   0,
+   0,
+   0
+  ],
+  "toEulerDeg": [
+   60,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 5.0,
+  "surfaceY": 1.042,
+  "note": "2 picked up: 0.3 m/s and tilting to 60 deg, 5 mm of orientation-driven noise (expect expanded -> carrying, NO ignoring detection)"
+ },
+ {
+  "fromSeconds": 3.6,
+  "toSeconds": 6.0,
+  "position": [
+   0.06,
+   1.22,
+   -0.8
+  ],
+  "eulerDeg": [
+   60,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 3.0,
+  "surfaceY": 1.042,
+  "note": "3 held still, tilted 60 deg in the hand (expect the hand form: scale 0.5, 35 mm above the screen)"
+ },
+ {
+  "fromSeconds": 6.0,
+  "toSeconds": 6.4,
+  "position": [
+   0.06,
+   1.22,
+   -0.8
+  ],
+  "eulerDeg": [
+   60,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "tracked": false,
+  "surfaceY": 1.042,
+  "note": "4 lost for 0.4 s, untracked (expect held(untracked) at once - object mode forwards the loss)"
+ },
+ {
+  "fromSeconds": 6.4,
+  "toSeconds": 9.0,
+  "position": [
+   0.07,
+   1.23,
+   -0.79
+  ],
+  "toPosition": [
+   0.11,
+   1.23,
+   -0.79
+  ],
+  "eulerDeg": [
+   60,
+   0,
+   0
+  ],
+  "toEulerDeg": [
+   52,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 3.0,
+  "surfaceY": 1.042,
+  "note": "5 found again 1.5 cm away and slowly moving (expect -> carrying via thaw(<= 2 cm), still no ignoring detection)"
+ },
+ {
+  "fromSeconds": 9.0,
+  "toSeconds": 16.0,
+  "position": [
+   0.11,
+   1.23,
+   -0.79
+  ],
+  "toPosition": [
+   0.15,
+   1.24,
+   -0.77
+  ],
+  "eulerDeg": [
+   52,
+   0,
+   0
+  ],
+  "toEulerDeg": [
+   58,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 3.0,
+  "surfaceY": 1.042,
+  "note": "6 still in the hand while the buttons are pressed: OK dismiss at 9 s, OK show at 11 s, DOWN 13/14 s, UP 15 s"
+ },
+ {
+  "fromSeconds": 16.0,
+  "toSeconds": 17.0,
+  "position": [
+   0.15,
+   1.24,
+   -0.77
+  ],
+  "toPosition": [
+   0.25,
+   1.05,
+   -0.72
+  ],
+  "eulerDeg": [
+   58,
+   0,
+   0
+  ],
+  "toEulerDeg": [
+   0,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 2.0,
+  "surfaceY": 1.042,
+  "note": "7 put down flat again, 25 cm from where it started (expect carrying -> settling -> expanded (settled))"
+ },
+ {
+  "fromSeconds": 17.0,
+  "toSeconds": 24.0,
+  "position": [
+   0.25,
+   1.05,
+   -0.72
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 0.5,
+  "surfaceY": 1.042,
+  "note": "8 still on the desk (expect the desk form back: halo, coins, projector, and a Sigma line with inHand well under 100%)"
+ }
+]

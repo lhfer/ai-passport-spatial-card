@@ -1,0 +1,5 @@
+[
+  {"fromSeconds": 8.0, "toSeconds": 8.08, "position": [0, 1.3, -0.62], "eulerDeg": [70, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292, "note": "v4 B4 §1 gate flip (first seen 8 s in, once the space and the hero card are up, so the first presence event is applied as it happens), hand → desk: first seen tilted 70° for 0.08 s — the recognition takes off on the hand's path (tilt 70° > 45°; the desk gate needs 0.15 s above 45° to leave the desk, so it never does)"},
+  {"fromSeconds": 8.08, "toSeconds": 8.2, "position": [0, 1.3, -0.62], "eulerDeg": [70, 0, 0], "toEulerDeg": [0, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292, "note": "2 laid flat within 0.2 s, without moving off its spot"},
+  {"fromSeconds": 8.2, "toSeconds": 31.0, "position": [0, 1.3, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292, "note": "3 still on the desk: the gate settles on expanded (cinematic); the closure falls back to the rise off the screen (the outline was drawn on the hinge), logged as a fallback"}
+]

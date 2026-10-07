@@ -1,0 +1,385 @@
+{
+  "id": "deep-sea",
+  "name": "深海微光",
+  "subtitle": "桌面漫水，沉入月光下的海底礁台",
+  "icon": "water.waves",
+  "palette": {
+    "background": "#041C3A",
+    "primary": "#0B6FB3",
+    "secondary": "#5CF2FF",
+    "highlight": "#E6FBFF",
+    "accent": "#FF7AD9"
+  },
+  "immersion": {
+    "shellOpacity": 1.0,
+    "shellColor": "#041C3A"
+  },
+  "entry": {
+    "kind": "flood",
+    "duration": 3.6
+  },
+  "exit": {
+    "kind": "drain",
+    "duration": 3.0
+  },
+  "audio": {
+    "ambient": "worldSeaAmbient",
+    "entry": "waterRise",
+    "exit": "surface"
+  },
+  "exitLabel": "浮出水面",
+  "hologramTint": "#5CF2FF",
+  "environment": {
+    "hdri": "sea_ibl",
+    "iblIntensity": -0.5,
+    "sky": "sea_sky",
+    "skyTint": "#1F3C70",
+    "skyRadius": 30
+  },
+  "placements": [
+    {
+      "asset": "sea_coast_rocks_05",
+      "at": [
+        6.6,
+        -1.6,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1.8
+    },
+    {
+      "asset": "sea_coast_rocks_05",
+      "at": [
+        6.4,
+        3.8,
+        0
+      ],
+      "yaw": 140,
+      "scale": 1.6
+    },
+    {
+      "asset": "sea_rock_moss_02",
+      "at": [
+        7.4,
+        -7.5,
+        0
+      ],
+      "yaw": 10,
+      "scale": 1.2
+    },
+    {
+      "asset": "sea_boulder_03",
+      "at": [
+        8.6,
+        -4.6,
+        0
+      ],
+      "yaw": 20,
+      "scale": 3.0
+    },
+    {
+      "asset": "sea_boulder_01",
+      "at": [
+        8.2,
+        0.6,
+        0
+      ],
+      "yaw": -30,
+      "scale": 3.6
+    },
+    {
+      "asset": "sea_boulder_02",
+      "at": [
+        8.6,
+        5.2,
+        0
+      ],
+      "yaw": 15,
+      "scale": 3.4
+    },
+    {
+      "asset": "sea_boulder_02",
+      "at": [
+        9.6,
+        -2.6,
+        2.7
+      ],
+      "yaw": 60,
+      "scale": 3.6
+    },
+    {
+      "asset": "sea_boulder_03",
+      "at": [
+        9.9,
+        2.6,
+        2.9
+      ],
+      "yaw": 200,
+      "scale": 3.0
+    },
+    {
+      "asset": "sea_boulder_01",
+      "at": [
+        9.7,
+        7.2,
+        2.4
+      ],
+      "yaw": 90,
+      "scale": 3.4,
+      "minTier": 2
+    },
+    {
+      "asset": "sea_boulder_03",
+      "at": [
+        10.6,
+        0.0,
+        5.3
+      ],
+      "yaw": 40,
+      "scale": 3.4
+    },
+    {
+      "asset": "sea_boulder_02",
+      "at": [
+        10.9,
+        -5.2,
+        5.6
+      ],
+      "yaw": 110,
+      "scale": 3.3
+    },
+    {
+      "asset": "sea_boulder_02",
+      "at": [
+        10.9,
+        5.6,
+        5.5
+      ],
+      "yaw": 250,
+      "scale": 3.3
+    },
+    {
+      "asset": "sea_boulder_01",
+      "at": [
+        11.6,
+        -2.6,
+        8.0
+      ],
+      "yaw": 300,
+      "scale": 3.8,
+      "minTier": 2
+    },
+    {
+      "asset": "sea_boulder_03",
+      "at": [
+        11.9,
+        3.6,
+        8.2
+      ],
+      "yaw": 130,
+      "scale": 3.0,
+      "minTier": 1
+    },
+    {
+      "asset": "sea_boulder_02",
+      "at": [
+        12.4,
+        0.5,
+        10.6
+      ],
+      "yaw": 20,
+      "scale": 3.4,
+      "minTier": 2
+    },
+    {
+      "asset": "sea_wreck",
+      "at": [
+        -4.5,
+        8.5,
+        -0.6
+      ],
+      "yaw": 35,
+      "scale": 0.75
+    },
+    {
+      "asset": "sea_cannon",
+      "at": [
+        -2.6,
+        6.2,
+        0
+      ],
+      "yaw": -40,
+      "scale": 0.8
+    },
+    {
+      "asset": "sea_rowboat",
+      "at": [
+        0.8,
+        8.0,
+        0
+      ],
+      "yaw": 70,
+      "scale": 0.9
+    },
+    {
+      "asset": "sea_chest",
+      "at": [
+        -1.6,
+        5.6,
+        0
+      ],
+      "yaw": 20,
+      "scale": 1.0
+    },
+    {
+      "asset": "sea_buoy",
+      "at": [
+        -6.5,
+        5.5,
+        0.4
+      ],
+      "yaw": 0,
+      "scale": 1.0
+    }
+  ],
+  "scatters": [
+    {
+      "asset": "sea_rock_moss_01",
+      "count": 3,
+      "radius": [
+        3.5,
+        6.5
+      ],
+      "angle": [
+        -175,
+        175
+      ],
+      "scale": [
+        0.45,
+        0.7
+      ],
+      "y": 0,
+      "seed": 31,
+      "minTier": 1
+    },
+    {
+      "asset": "sea_rock_moss_02",
+      "count": 3,
+      "radius": [
+        3.0,
+        7.0
+      ],
+      "angle": [
+        -175,
+        175
+      ],
+      "scale": [
+        0.5,
+        0.8
+      ],
+      "y": 0,
+      "seed": 32,
+      "minTier": 1
+    },
+    {
+      "asset": "sea_boulder_02",
+      "count": 5,
+      "radius": [
+        2.6,
+        6.0
+      ],
+      "angle": [
+        -175,
+        175
+      ],
+      "scale": [
+        0.5,
+        0.9
+      ],
+      "y": -0.05,
+      "seed": 33
+    },
+    {
+      "asset": "sea_boulder_01",
+      "count": 1,
+      "radius": [
+        3.0,
+        6.5
+      ],
+      "angle": [
+        -175,
+        175
+      ],
+      "scale": [
+        0.6,
+        1.0
+      ],
+      "y": -0.05,
+      "seed": 34
+    },
+    {
+      "asset": "sea_barrel",
+      "count": 5,
+      "radius": [
+        5.0,
+        8.5
+      ],
+      "angle": [
+        95,
+        150
+      ],
+      "scale": [
+        0.9,
+        1.15
+      ],
+      "y": 0,
+      "seed": 35
+    },
+    {
+      "asset": "sea_crate",
+      "count": 4,
+      "radius": [
+        4.5,
+        7.5
+      ],
+      "angle": [
+        90,
+        145
+      ],
+      "scale": [
+        0.9,
+        1.2
+      ],
+      "y": 0,
+      "seed": 36
+    }
+  ],
+  "fog": [
+    {
+      "distance": 6,
+      "height": 30,
+      "color": "#0A2040",
+      "opacity": 0.16
+    },
+    {
+      "distance": 12,
+      "height": 34,
+      "color": "#0A2040",
+      "opacity": 0.3
+    },
+    {
+      "distance": 20,
+      "height": 40,
+      "color": "#0A2040",
+      "opacity": 0.4,
+      "minTier": 1
+    },
+    {
+      "distance": 27,
+      "height": 44,
+      "color": "#0A2040",
+      "opacity": 0.5,
+      "minTier": 1
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 26.0, "position": [0, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.20, -0.30]},
+   "note": "v4 B4 §3.3 the same turn of the view as fake-track-b4-head-turn.json, made by the passport instead of the head (the base build has no fake head): 1 on the desk — the recognition, the gallery, the two worlds prebuilt in the quiet"},
+  {"fromSeconds": 26.0, "toSeconds": 27.0, "position": [0, 1.30, -0.62], "toPosition": [0.14, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.20, -0.30]},
+   "note": "2 the passport is slid 14 cm to the right on the desk: the head → card direction turns ≈ 13° (B3 drops both worlds — card moved > 5 cm, view turned > 6° — and builds them again)"},
+  {"fromSeconds": 27.0, "toSeconds": 70.0, "position": [0.14, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.20, -0.30]},
+   "note": "3 at rest in its new spot; UP lands on a world coin, OK enters it (B4: no `prebuilt … dropped`; at the entry `prebuilt root … turned … about the card to the current view (no rebuild)`)"}
+]

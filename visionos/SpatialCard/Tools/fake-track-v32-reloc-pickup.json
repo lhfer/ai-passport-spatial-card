@@ -1,0 +1,59 @@
+[
+  {
+    "fromSeconds": 0.0,
+    "toSeconds": 5.0,
+    "position": [0, 1.05, -0.6],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 0.5,
+    "surfaceY": 1.042,
+    "note": "1 desk: flat and still (expect absent -> acquiring -> expanded (cinematic), [notes] fan out 10 cards)"
+  },
+  {
+    "fromSeconds": 5.0,
+    "toSeconds": 6.0,
+    "position": [0, 1.05, -0.6],
+    "source": "object",
+    "tracked": false,
+    "rateHz": 30,
+    "jitterMm": 0.5,
+    "surfaceY": 1.042,
+    "note": "2 a hand covers the shell: untracked observations (expect expanded -> held(untracked))"
+  },
+  {
+    "fromSeconds": 6.0,
+    "toSeconds": 6.15,
+    "position": [0.12, 1.05, -0.6],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 0.5,
+    "surfaceY": 1.042,
+    "note": "3 seen again 12 cm away, still flat (expect relocation candidate -> thaw(12.0 cm) -> [follow] relocate 12.0 cm tau=0.35)"
+  },
+  {
+    "fromSeconds": 6.15,
+    "toSeconds": 6.75,
+    "position": [0.12, 1.05, -0.6],
+    "toPosition": [0.17, 1.22, -0.64],
+    "eulerDeg": [0, 0, 0],
+    "toEulerDeg": [62, 0, 0],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 5.0,
+    "surfaceY": 1.042,
+    "note": "4 picked up 0.15 s into the glide (expect [obj] desk gate -> hand and [follow] relocate retuned -> hand tau=0.10)"
+  },
+  {
+    "fromSeconds": 6.75,
+    "toSeconds": 16.0,
+    "position": [0.17, 1.22, -0.64],
+    "toPosition": [0.21, 1.24, -0.62],
+    "eulerDeg": [62, 0, 0],
+    "toEulerDeg": [58, 0, 0],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 3.0,
+    "surfaceY": 1.042,
+    "note": "5 held: the card must have caught up inside a second ([follow] arrived), Sigma lag in the single digits"
+  }
+]

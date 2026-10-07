@@ -1,0 +1,5 @@
+[
+  {"atSeconds": 0.5, "line": "{\"t\":\"hello\",\"fw\":\"0.2.1\",\"boot\":7,\"mode\":\"ar\",\"theme\":\"base\",\"stats\":{\"followers\":4401,\"likes\":44000,\"notes\":128,\"delta\":0,\"ts\":NOW},\"battery\":{\"soc\":88,\"mv\":4060},\"ble\":{\"connected\":true},\"heap\":181240,\"backlight\":85}"},
+  {"atSeconds": 12.0, "line": "{\"t\":\"button\",\"btn\":\"ok\",\"ev\":\"long\"}"},
+  {"atSeconds": 12.4, "line": "{\"t\":\"button\",\"btn\":\"ok\",\"ev\":\"click\"}"}
+]

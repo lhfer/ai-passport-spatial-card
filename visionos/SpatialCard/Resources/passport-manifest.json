@@ -1,0 +1,164 @@
+{
+  "schema": 1,
+  "generatedBy": "hub/tools/render-screens.ts",
+  "generatedAt": "2026-10-07T08:59:19.262Z",
+  "physicalWidthMeters": 0.03672,
+  "physicalHeightMeters": 0.04896,
+  "pixelSize": [240, 320],
+  "referenceScale": 2,
+  "cornerRadiusPx": 30,
+  "dynamicRegion": {
+    "rect": [0, 272, 240, 48]
+  },
+  "coordinateSpace": {
+    "u": "x / 240 (0 = left)",
+    "vTop": "y / 320 (0 = top)",
+    "circleRadius": "fraction of width (r * 240 = px)"
+  },
+  "themes": [
+    {
+      "id": "base",
+      "label": "名片",
+      "world": null,
+      "referenceImage": "passport-base",
+      "bitmap": "PassportBase",
+      "stripColor": "#081020",
+      "regions": {
+        "avatar": {
+          "circle": [0.5, 0.2688, 0.2]
+        },
+        "name": {
+          "rect": [0.0583, 0.4688, 0.9417, 0.5563]
+        },
+        "handle": {
+          "rect": [0.0583, 0.5656, 0.9417, 0.6156]
+        },
+        "location": {
+          "rect": [0.0583, 0.6219, 0.9417, 0.6656]
+        },
+        "tags": {
+          "rect": [0.05, 0.6938, 0.95, 0.7688]
+        },
+        "followers": {
+          "rect": [0, 0.85, 1, 1]
+        }
+      },
+      "regionsPx": {
+        "avatar": {
+          "circle": [120, 86, 48]
+        },
+        "name": {
+          "rect": [14, 150, 226, 178]
+        },
+        "handle": {
+          "rect": [14, 181, 226, 197]
+        },
+        "location": {
+          "rect": [14, 199, 226, 213]
+        },
+        "tags": {
+          "rect": [12, 222, 228, 246]
+        },
+        "followers": {
+          "rect": [0, 272, 240, 320]
+        }
+      }
+    },
+    {
+      "id": "neon-city",
+      "label": "霓虹雨城",
+      "world": "neon-city",
+      "referenceImage": "passport-neon-city",
+      "bitmap": "PassportNeonCity",
+      "stripColor": "#100818",
+      "regions": {
+        "avatar": {
+          "circle": [0.2417, 0.725, 0.125]
+        },
+        "name": {
+          "rect": [0.4, 0.65, 0.9667, 0.725]
+        },
+        "handle": {
+          "rect": [0.4, 0.7375, 0.9667, 0.7875]
+        },
+        "location": {
+          "rect": [0.4, 0.7938, 0.9667, 0.8375]
+        },
+        "tags": {
+          "rect": [0.05, 0.0688, 0.95, 0.2625]
+        },
+        "followers": {
+          "rect": [0, 0.85, 1, 1]
+        }
+      },
+      "regionsPx": {
+        "avatar": {
+          "circle": [58, 232, 30]
+        },
+        "name": {
+          "rect": [96, 208, 232, 232]
+        },
+        "handle": {
+          "rect": [96, 236, 232, 252]
+        },
+        "location": {
+          "rect": [96, 254, 232, 268]
+        },
+        "tags": {
+          "rect": [12, 22, 228, 84]
+        },
+        "followers": {
+          "rect": [0, 272, 240, 320]
+        }
+      }
+    },
+    {
+      "id": "data-nebula",
+      "label": "数据星云",
+      "world": "data-nebula",
+      "referenceImage": "passport-data-nebula",
+      "bitmap": "PassportDataNebula",
+      "stripColor": "#080410",
+      "regions": {
+        "avatar": {
+          "circle": [0.6583, 0.3438, 0.1667]
+        },
+        "name": {
+          "rect": [0.0583, 0.6125, 0.9417, 0.7]
+        },
+        "handle": {
+          "rect": [0.0583, 0.7063, 0.9417, 0.7563]
+        },
+        "location": {
+          "rect": [0.0583, 0.7625, 0.9417, 0.8063]
+        },
+        "tags": {
+          "rect": [0.05, 0.0625, 0.625, 0.2188]
+        },
+        "followers": {
+          "rect": [0, 0.85, 1, 1]
+        }
+      },
+      "regionsPx": {
+        "avatar": {
+          "circle": [158, 110, 40]
+        },
+        "name": {
+          "rect": [14, 196, 226, 224]
+        },
+        "handle": {
+          "rect": [14, 226, 226, 242]
+        },
+        "location": {
+          "rect": [14, 244, 226, 258]
+        },
+        "tags": {
+          "rect": [12, 20, 150, 70]
+        },
+        "followers": {
+          "rect": [0, 272, 240, 320]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+menu "Spatial Card"
+
+    config CARD_ENABLE_BLE
+        bool "Enable the BLE Nordic UART link (NimBLE)"
+        depends on BT_NIMBLE_ENABLED
+        default y
+        help
+            Vision Pro link. Disable (together with CONFIG_BT_ENABLED=n, see
+            sdkconfig.noble) for the browser simulator or BLE-less bring-up.
+
+    config CARD_SCREEN_WIDTH_MM
+        string "Active display width in mm"
+        default "36.72"
+        help
+            Mirrors assets/card/card.json device.activeAreaMm[0]. Reported in the
+            hello message as screenWidthMm (informational).
+
+    config CARD_DEFAULT_THEME
+        string "Theme shown at boot when the screen is locked"
+        default "base"
+        help
+            Theme id the screen is pinned to while CARD_SCREEN_LOCK is on
+            ("base", "neon-city" or "data-nebula"; anything else maps to "base").
+            With the lock off this value is unused and the theme comes from NVS.
+
+    config CARD_SCREEN_LOCK
+        bool "Lock the screen to CARD_DEFAULT_THEME"
+        default y
+        help
+            The ARKit reference object was trained with CARD_DEFAULT_THEME on the
+            screen, so the pixels must never change for the life of that scan.
+            With the lock on the card boots into that theme whatever NVS
+            remembers, idle UP/DOWN no longer cycle the theme (the button events
+            are still reported on serial / BLE), and `set_theme` from either link
+            is refused with ack ok:false err:"locked". `strip`, `set_mode`,
+            `stats`, `celebrate` and `backlight` are unaffected, and `glow` is a
+            transient overlay and unaffected (it restores the pixels underneath
+            exactly, so it is not a theme change).
+
+    config CARD_AR_BACKLIGHT_PERCENT
+        int "AR-mode backlight level (percent)"
+        range 10 100
+        default 85
+        help
+            Level used while a BLE central is connected; 100 = DC. Below 100 the
+            backlight runs on the 5 kHz / 10-bit LEDC PWM, which is far above the
+            headset camera frame rate and therefore invisible to it, so a lower
+            level is a real duty cycle that stops the card over-exposing under room
+            light. The `backlight` command overrides this for the running AR
+            session; `set_mode ar` re-applies this default. 85 is the V3-4 round's
+            choice, NOT a measured result -- the v2 plan's experiment E1 (100/60/40)
+            was never run on hardware, so treat 85 as a starting point that the
+            Hub's `backlight` command retunes live. It is pinned here rather than in
+            sdkconfig.defaults so the isolated tools/validate.sh --firmware build
+            gets it too, and it leaves the button blink (CARD_BUTTON_BLINK) room to
+            flash UP to 100 instead of dipping.
+
+    config CARD_BUTTON_BLINK
+        bool "Blink the backlight on every button press"
+        default y
+        help
+            AR mode keeps the screen pixel-static, so a press would otherwise
+            produce no feedback on the card at all. With this on, every click /
+            long press in AR mode blinks the backlight *toward the far end* of
+            the range for 120 ms: from the 85 % default it flashes UP to 100 and
+            holds it, and only a session already at 100 goes the other way (down
+            to 55 % for 60 ms, then halfway back, then the exact level). A screen
+            that dims on a key press reads as a glitch; one that flashes brighter
+            reads as a response. Backlight only: no repaint, no
+            `will_change`/`changed`, no change to the `backlight` value reported
+            in `hello` / `battery`, and a no-op in idle mode or while the
+            backlight is off.
+
+    config CARD_CUE_VOLUME
+        int "Cue playback volume (0-100)"
+        range 0 100
+        default 70
+
+endmenu

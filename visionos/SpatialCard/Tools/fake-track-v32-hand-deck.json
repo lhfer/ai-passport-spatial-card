@@ -1,0 +1,75 @@
+[
+  {
+    "fromSeconds": 0.0,
+    "toSeconds": 3.0,
+    "position": [0, 1.05, -0.6],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 0.5,
+    "surfaceY": 1.042,
+    "note": "1 desk: flat and still (expect the cinematic and [notes] fan out 10 cards)"
+  },
+  {
+    "fromSeconds": 3.0,
+    "toSeconds": 3.6,
+    "position": [0, 1.05, -0.6],
+    "toPosition": [0.05, 1.22, -0.62],
+    "eulerDeg": [0, 0, 0],
+    "toEulerDeg": [65, 0, 0],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 5.0,
+    "surfaceY": 1.042,
+    "note": "2 picked up to 65 deg at 0.3 m/s (expect the pick-up morph and the hand deck)"
+  },
+  {
+    "fromSeconds": 3.6,
+    "toSeconds": 8.0,
+    "position": [0.05, 1.22, -0.62],
+    "eulerDeg": [65, 0, 0],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 3.0,
+    "surfaceY": 1.042,
+    "note": "3 held still"
+  },
+  {
+    "fromSeconds": 8.0,
+    "toSeconds": 9.5,
+    "position": [0.05, 1.22, -0.62],
+    "toPosition": [-0.12, 1.24, -0.6],
+    "eulerDeg": [65, 0, 0],
+    "toEulerDeg": [62, 0, 0],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 3.0,
+    "surfaceY": 1.042,
+    "note": "4 moved sideways at 0.3 m/s (deck lag + trails)"
+  },
+  {
+    "fromSeconds": 9.5,
+    "toSeconds": 11.0,
+    "position": [-0.12, 1.24, -0.6],
+    "toPosition": [-0.1, 1.23, -0.6],
+    "eulerDeg": [62, 0, -25],
+    "toEulerDeg": [62, 0, 25],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 3.0,
+    "surfaceY": 1.042,
+    "note": "5 rolled +/-25 deg (the 12 mm plate's side edge, and the deck's parallax)"
+  },
+  {
+    "fromSeconds": 11.0,
+    "toSeconds": 30.0,
+    "position": [-0.1, 1.23, -0.6],
+    "toPosition": [-0.06, 1.24, -0.62],
+    "eulerDeg": [62, 0, 0],
+    "toEulerDeg": [58, 0, 0],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 3.0,
+    "surfaceY": 1.042,
+    "note": "6 held for the button段: DOWN 12/13/14, OK 15 preview, OK 17 close, UP 18, UP 19, OK 20 fold, OK 22 summon"
+  }
+]

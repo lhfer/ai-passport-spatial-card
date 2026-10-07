@@ -1,0 +1,11 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 10.0, "position": [0, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.20, -0.30]},
+   "note": "v4 B2 §3.3 desk loss (the control for fake-track-v4-pickup-loss.json): 1 on the desk, the wearer's right hand tracked 50 cm away"},
+  {"fromSeconds": 10.0, "toSeconds": 13.0, "position": [0, 1.30, -0.62], "tracked": false, "source": "object", "rateHz": 30, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.20, -0.30]},
+   "note": "2 lost for 3 s with no hand anywhere near it (expect held(untracked), [reveal] holding (object lost) — the card waits where it was, dimmed — and NO pick-up fold)"},
+  {"fromSeconds": 13.0, "toSeconds": 20.0, "position": [0, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.20, -0.30]},
+   "note": "3 found again where it lay (expect [reveal] following again, [timing] desk loss 3.0 s)"}
+]

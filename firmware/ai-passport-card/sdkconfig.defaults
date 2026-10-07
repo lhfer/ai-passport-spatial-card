@@ -1,0 +1,45 @@
+# Spatial Card firmware — ESP-IDF 5.5.3 defaults (based on FoloToy/ai-passport upstream).
+
+# --- Target ---
+CONFIG_IDF_TARGET="esp32c3"
+# No PSRAM on the ESP32-C3.
+
+# --- Flash / partitions (8 MB, merged image flashed from 0x0) ---
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+CONFIG_ESPTOOLPY_HEADER_FLASHSIZE_UPDATE=n
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_PARTITION_TABLE_FILENAME="partitions.csv"
+
+# --- Console: USB Serial/JTAG (GPIO18/19). UART0 TX would collide with the backlight on GPIO21. ---
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+CONFIG_ESP_CONSOLE_SECONDARY_NONE=y
+# Plain log lines: the JSON log wrapper must not have to strip ANSI colour codes.
+CONFIG_LOG_COLORS=n
+
+# --- LVGL 9.5 ---
+CONFIG_LV_COLOR_DEPTH_16=y
+CONFIG_LV_FONT_MONTSERRAT_14=y
+# Separate static pool, not the system heap. One screen, one image, one label: 24 KB is enough.
+CONFIG_LV_MEM_SIZE_KILOBYTES=24
+# Image cache off: RGB565 themes are drawn straight from flash, never copied to RAM.
+CONFIG_LV_CACHE_DEF_SIZE=0
+
+# --- System ---
+CONFIG_FREERTOS_HZ=1000
+# -Os: no PSRAM and BLE + LVGL + audio share ~176 KB of heap; the debug default (-Og)
+# keeps ~100 KB of IRAM .text. Size optimisation buys heap headroom, asserts stay on.
+CONFIG_COMPILER_OPTIMIZATION_SIZE=y
+
+# --- Bluetooth LE / NimBLE (peripheral only, one central) ---
+CONFIG_BT_ENABLED=y
+CONFIG_BT_NIMBLE_ENABLED=y
+CONFIG_BT_NIMBLE_ROLE_CENTRAL=n
+CONFIG_BT_NIMBLE_ROLE_PERIPHERAL=y
+CONFIG_BT_NIMBLE_ROLE_BROADCASTER=y
+CONFIG_BT_NIMBLE_ROLE_OBSERVER=n
+CONFIG_BT_NIMBLE_MAX_CONNECTIONS=1
+CONFIG_BT_NIMBLE_HOST_BASED_PRIVACY=n
+CONFIG_BT_NIMBLE_NVS_PERSIST=n
+CONFIG_BT_NIMBLE_ATT_PREFERRED_MTU=247
+CONFIG_BT_NIMBLE_LOG_LEVEL_WARNING=y

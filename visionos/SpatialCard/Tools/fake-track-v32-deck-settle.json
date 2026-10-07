@@ -1,0 +1,35 @@
+[
+  {
+    "fromSeconds": 0.0, "toSeconds": 3.0,
+    "position": [0, 1.05, -0.6],
+    "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.042,
+    "note": "1 desk: flat and still"
+  },
+  {
+    "fromSeconds": 3.0, "toSeconds": 3.6,
+    "position": [0, 1.05, -0.6], "toPosition": [0.05, 1.22, -0.62],
+    "eulerDeg": [0, 0, 0], "toEulerDeg": [65, 0, 0],
+    "source": "object", "rateHz": 30, "jitterMm": 5.0, "surfaceY": 1.042,
+    "note": "2 picked up (expect the deck)"
+  },
+  {
+    "fromSeconds": 3.6, "toSeconds": 16.0,
+    "position": [0.05, 1.22, -0.62],
+    "eulerDeg": [65, 0, 0],
+    "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+    "note": "3 held for DOWN 12/13/14 and OK 15 (a deck preview opens)"
+  },
+  {
+    "fromSeconds": 16.0, "toSeconds": 16.6,
+    "position": [0.05, 1.22, -0.62], "toPosition": [0.2, 1.05, -0.58],
+    "eulerDeg": [65, 0, 0], "toEulerDeg": [0, 0, 0],
+    "source": "object", "rateHz": 30, "jitterMm": 2.0, "surfaceY": 1.042,
+    "note": "4 PUT DOWN WITH THE PREVIEW STILL OPEN (expect [notes] preview ended, then the bloom)"
+  },
+  {
+    "fromSeconds": 16.6, "toSeconds": 26.0,
+    "position": [0.2, 1.05, -0.58],
+    "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.042,
+    "note": "5 desk again: the gallery must be whole and nothing left in root space"
+  }
+]

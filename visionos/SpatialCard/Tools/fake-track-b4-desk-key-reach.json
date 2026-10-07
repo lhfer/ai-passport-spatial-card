@@ -1,0 +1,23 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 12.0, "position": [0, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.25, -0.30]},
+   "note": "v4 B4 §2 B3 run 1 line 1084 (with fake-device-b4-desk-key-reach.json): 1 on the desk — the recognition, the reveal, the gallery; the hand 54 cm away"},
+  {"fromSeconds": 12.0, "toSeconds": 14.6, "position": [0, 1.30, -0.62], "tracked": false, "source": "object", "rateHz": 30, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.25, -0.30]},
+   "note": "2 the camera loses the passport with no hand near it (the desk case: the card waits, dimmed)"},
+  {"fromSeconds": 14.6, "toSeconds": 15.0, "position": [0, 1.30, -0.62], "tracked": false, "source": "object", "rateHz": 30, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.25, -0.30], "toPosition": [0.11, 1.34, -0.61]},
+   "note": "3 2.6 s into the loss the hand comes over to press a key (to 12 cm): the reach opens the window — B2 folded 0.6 s after it"},
+  {"fromSeconds": 15.0, "toSeconds": 15.6, "position": [0, 1.30, -0.62], "tracked": false, "source": "object", "rateHz": 30, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.11, 1.34, -0.61], "toPosition": [0.115, 1.342, -0.61]},
+   "note": "4 pressing (keys every 0.3 s)"},
+  {"fromSeconds": 15.6, "toSeconds": 16.2, "position": [0, 1.30, -0.62], "tracked": false, "source": "object", "rateHz": 30, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.115, 1.342, -0.61], "toPosition": [0.40, 1.40, -0.30]},
+   "note": "5 …and it goes back, inside the window and inside the key's 1.5 s (expect [pickup] not a pick-up … a key)"},
+  {"fromSeconds": 16.2, "toSeconds": 18.5, "position": [0, 1.30, -0.62], "tracked": false, "source": "object", "rateHz": 30, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.40, -0.30]},
+   "note": "6 still lost"},
+  {"fromSeconds": 18.5, "toSeconds": 28.0, "position": [0.004, 1.30, -0.617], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.40, -0.30]},
+   "note": "7 found again where it lay (expect no fold anywhere; the card brightens where it stood)"}
+]

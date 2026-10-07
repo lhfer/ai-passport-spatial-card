@@ -1,0 +1,4 @@
+# Overlay for the browser simulator / BLE-less builds:
+#   idf.py -B build-noble -D SDKCONFIG_DEFAULTS="sdkconfig.defaults;sdkconfig.noble" -D SDKCONFIG=build-noble/sdkconfig build
+CONFIG_BT_ENABLED=n
+CONFIG_CARD_ENABLE_BLE=n

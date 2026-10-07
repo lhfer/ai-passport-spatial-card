@@ -1,0 +1,107 @@
+[
+ {
+  "fromSeconds": 0.0,
+  "toSeconds": 4.0,
+  "position": [
+   0,
+   1.05,
+   -0.6
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 3.0,
+  "surfaceY": 1.042,
+  "note": "1 desk: still under the headset's own 3 mm noise floor (the reveal runs here; not measured)"
+ },
+ {
+  "fromSeconds": 4.0,
+  "toSeconds": 4.6,
+  "position": [
+   0,
+   1.05,
+   -0.6
+  ],
+  "toPosition": [
+   0.05,
+   1.22,
+   -0.62
+  ],
+  "eulerDeg": [
+   0,
+   0,
+   0
+  ],
+  "toEulerDeg": [
+   65,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 3.0,
+  "surfaceY": 1.042,
+  "note": "2 picked up (the hand form is where the wearer checks the card against the real LCD)"
+ },
+ {
+  "fromSeconds": 4.6,
+  "toSeconds": 17.0,
+  "position": [
+   0.05,
+   1.22,
+   -0.62
+  ],
+  "eulerDeg": [
+   65,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 3.0,
+  "surfaceY": 1.042,
+  "note": "3 STILL WINDOW: 12.4 s of 3 mm @ 30 Hz, held motionless -> two clean Sigma windows for jitter/jitterOut"
+ },
+ {
+  "fromSeconds": 17.0,
+  "toSeconds": 20.0,
+  "position": [
+   0.05,
+   1.22,
+   -0.62
+  ],
+  "toPosition": [
+   -0.85,
+   1.22,
+   -0.62
+  ],
+  "eulerDeg": [
+   65,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 3.0,
+  "surfaceY": 1.042,
+  "note": "4 MOVING WINDOW: 90 cm sideways in 3.0 s = 0.30 m/s (the brief's lateral speed) -> Sigma lag="
+ },
+ {
+  "fromSeconds": 20.0,
+  "toSeconds": 32.0,
+  "position": [
+   -0.85,
+   1.22,
+   -0.62
+  ],
+  "eulerDeg": [
+   65,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 3.0,
+  "surfaceY": 1.042,
+  "note": "5 STILL AGAIN: 12 s, so the lag comes back to zero and the still numbers are confirmed twice"
+ }
+]

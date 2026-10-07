@@ -1,0 +1,107 @@
+{
+  "rev": 1,
+  "updatedAt": "2026-01-01T00:00:00.000Z",
+  "count": 10,
+  "notes": [
+    {
+      "id": "000000000000000000000001",
+      "title": "让名片走进空间",
+      "likes": 128,
+      "pinned": false,
+      "type": "video",
+      "coverURL": "fake-cover-1.png",
+      "url": "https://example.com/notes/1",
+      "publishedAt": null
+    },
+    {
+      "id": "000000000000000000000002",
+      "title": "写给星空的一封信",
+      "likes": 256,
+      "pinned": false,
+      "type": "normal",
+      "coverURL": "fake-cover-2.png",
+      "url": "https://example.com/notes/2",
+      "publishedAt": null
+    },
+    {
+      "id": "000000000000000000000003",
+      "title": "在霓虹街角停一会儿",
+      "likes": 384,
+      "pinned": false,
+      "type": "normal",
+      "coverURL": "fake-cover-3.png",
+      "url": "https://example.com/notes/3",
+      "publishedAt": null
+    },
+    {
+      "id": "000000000000000000000004",
+      "title": "一束光的旅程",
+      "likes": 512,
+      "pinned": false,
+      "type": "video",
+      "coverURL": "fake-cover-4.png",
+      "url": "https://example.com/notes/4",
+      "publishedAt": null
+    },
+    {
+      "id": "000000000000000000000005",
+      "title": "小小世界，大大想象",
+      "likes": 640,
+      "pinned": false,
+      "type": "normal",
+      "coverURL": "fake-cover-5.png",
+      "url": "https://example.com/notes/5",
+      "publishedAt": null
+    },
+    {
+      "id": "000000000000000000000006",
+      "title": "今天也做点有趣的东西",
+      "likes": 768,
+      "pinned": false,
+      "type": "normal",
+      "coverURL": "fake-cover-6.png",
+      "url": "https://example.com/notes/6",
+      "publishedAt": null
+    },
+    {
+      "id": "000000000000000000000007",
+      "title": "把灵感装进口袋",
+      "likes": 896,
+      "pinned": false,
+      "type": "video",
+      "coverURL": "fake-cover-7.png",
+      "url": "https://example.com/notes/7",
+      "publishedAt": null
+    },
+    {
+      "id": "000000000000000000000008",
+      "title": "在纸上造一片山谷",
+      "likes": 1024,
+      "pinned": false,
+      "type": "normal",
+      "coverURL": "fake-cover-8.png",
+      "url": "https://example.com/notes/8",
+      "publishedAt": null
+    },
+    {
+      "id": "000000000000000000000009",
+      "title": "记录每一次新相遇",
+      "likes": 1152,
+      "pinned": false,
+      "type": "normal",
+      "coverURL": "fake-cover-9.png",
+      "url": "https://example.com/notes/9",
+      "publishedAt": null
+    },
+    {
+      "id": "00000000000000000000000a",
+      "title": "从这里出发",
+      "likes": 1280,
+      "pinned": true,
+      "type": "normal",
+      "coverURL": "fake-cover-10.png",
+      "url": "https://example.com/notes/10",
+      "publishedAt": null
+    }
+  ]
+}

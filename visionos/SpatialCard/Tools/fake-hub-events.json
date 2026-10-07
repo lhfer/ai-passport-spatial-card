@@ -1,0 +1,9 @@
+[
+  {"atSeconds": 3.0, "line": "{\"t\":\"stats\",\"followers\":4318,\"likes\":44012,\"notes\":128,\"delta\":5,\"ts\":NOW}"},
+  {"atSeconds": 3.3, "line": "{\"t\":\"celebrate\",\"delta\":5,\"followers\":4318}"},
+  {"atSeconds": 8.0, "line": "{\"t\":\"set_theme\",\"theme\":\"neon-city\"}"},
+  {"atSeconds": 12.0, "line": "{\"t\":\"cmd\",\"c\":\"replay\"}"},
+  {"atSeconds": 18.0, "line": "{\"t\":\"cmd\",\"c\":\"celebrate\",\"arg\":3}"},
+  {"atSeconds": 19.5, "line": "{\"t\":\"notes\",\"rev\":7,\"count\":10}"},
+  {"atSeconds": 21.0, "line": "{\"t\":\"hello\",\"fw\":\"0.1.0\"}"}
+]

@@ -1,0 +1,25 @@
+[
+  {"fromSeconds": 0.0,  "toSeconds": 5.0,  "position": [0, 1.14, -1.00], "note": "1 still 5 s (reveal)"},
+
+  {"fromSeconds": 5.0,  "toSeconds": 6.2,  "position": [0.098, 1.14, -1.00], "eulerDeg": [20, 0, 0], "jitterMm": 0.5,
+   "note": "2a ARKit drift: tracked pose 9.8 cm / 20 deg away, 1.2 s (expect no carry, outliers only)"},
+  {"fromSeconds": 6.2,  "toSeconds": 9.2,  "position": [0.098, 1.14, -1.00], "eulerDeg": [20, 0, 0], "tracked": false,
+   "note": "2b untracked 3 s (expect held(untracked), frozen at the rest pose)"},
+  {"fromSeconds": 9.2,  "toSeconds": 12.2, "position": [0, 1.14, -1.00],
+   "note": "2c back at rest (expect thaw(0.0 cm)) + 3 s still"},
+
+  {"fromSeconds": 12.2, "toSeconds": 12.7, "position": [0, 1.14, -1.00], "toPosition": [0.10, 1.14, -1.00],
+   "note": "4 real slide: 10 cm over 0.5 s (expect one carry, then settle)"},
+  {"fromSeconds": 12.7, "toSeconds": 17.7, "position": [0.10, 1.14, -1.00],
+   "note": "5 still 5 s at the new spot (expect settle then expanded)"},
+
+  {"fromSeconds": 17.7, "toSeconds": 22.7, "position": [0.10, 1.14, -1.00], "tracked": false,
+   "note": "6 untracked 5 s (expect held(untracked))"},
+
+  {"fromSeconds": 22.7, "toSeconds": 22.72, "position": [0.395, 1.14, -1.00],
+   "note": "7 one detection 30 cm away (expect a relocation candidate, no thaw)"},
+  {"fromSeconds": 23.02, "toSeconds": 23.04, "position": [0.40, 1.14, -1.00],
+   "note": "8 a second, consistent one 0.3 s later (expect thaw(30.x cm) + [follow] relocate)"},
+  {"fromSeconds": 23.04, "toSeconds": 33.04, "position": [0.40, 1.14, -1.00],
+   "note": "9 still 10 s at the relocated spot"}
+]

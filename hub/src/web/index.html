@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%230b1020%27/%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2715%27 fill=%27%23e7d5b1%27/%3E%3Cellipse cx=%2732%27 cy=%2732%27 rx=%2726%27 ry=%279%27 transform=%27rotate(-24 32 32)%27 fill=%27none%27 stroke=%27%23b89961%27 stroke-width=%273%27/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0b1020">
+<title>Spatial Card 导演遥控器</title>
+<style>
+  :root {
+    --bg: #0b1020; --panel: #141b31; --panel2: #1b2340; --text: #eef2ff; --muted: #94a0c4;
+    --accent: #5ee8ff; --pink: #ff6fd8; --amber: #ffd166; --green: #6ee7a7; --red: #ff5a6a;
+    --radius: 14px; --gap: 12px;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.45 -apple-system, "PingFang SC", "Helvetica Neue", "Noto Sans SC", sans-serif; }
+  body { padding: max(12px, env(safe-area-inset-top)) 12px max(24px, env(safe-area-inset-bottom)); }
+  main { max-width: 680px; margin: 0 auto; display: grid; gap: var(--gap); }
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  header h1 { font-size: 20px; margin: 0; }
+  header .handle { color: var(--muted); font-size: 14px; }
+  .banner { display: none; background: var(--red); color: #fff; padding: 12px 14px; border-radius: var(--radius); font-weight: 600; }
+  .banner.show { display: block; }
+  .card { background: var(--panel); border-radius: var(--radius); padding: 14px; }
+  .card h2 { font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--muted); margin: 0 0 10px; text-transform: uppercase; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .stat { background: var(--panel2); border-radius: 10px; padding: 10px 8px; text-align: center; }
+  .stat .v { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .stat .l { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .stat .d { font-size: 12px; color: var(--green); font-weight: 600; min-height: 16px; }
+  .meta { color: var(--muted); font-size: 13px; margin-top: 10px; display: flex; gap: 12px; flex-wrap: wrap; }
+  svg.spark { width: 100%; height: 72px; display: block; margin-top: 8px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { background: var(--panel2); border-radius: 999px; padding: 6px 12px; font-size: 14px; display: inline-flex; align-items: center; gap: 6px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); }
+  .dot.on { background: var(--green); box-shadow: 0 0 8px var(--green); }
+  .dot.warn { background: var(--amber); }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  button { appearance: none; border: 0; border-radius: 12px; min-height: 52px; padding: 10px 12px; font: inherit; font-size: 17px; font-weight: 600; color: #071022; background: var(--accent); cursor: pointer; }
+  button:active { transform: scale(.97); filter: brightness(.9); }
+  button:disabled { opacity: .5; cursor: default; }
+  button.secondary { background: var(--panel2); color: var(--text); }
+  button.pink { background: var(--pink); }
+  button.amber { background: var(--amber); }
+  button.wide { grid-column: 1 / -1; }
+  button.theme.active { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .toast { position: fixed; left: 50%; bottom: max(20px, env(safe-area-inset-bottom)); transform: translateX(-50%); background: #fff; color: #071022; padding: 10px 16px; border-radius: 999px; font-weight: 600; opacity: 0; transition: opacity .2s; pointer-events: none; max-width: 92vw; text-align: center; }
+  .toast.show { opacity: 1; }
+  .small { font-size: 12px; color: var(--muted); }
+  @media (min-width: 560px) { .stats .stat .v { font-size: 32px; } header h1 { font-size: 24px; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1 id="name">Spatial Card</h1>
+    <span class="handle" id="handle"></span>
+  </header>
+    <p class="small" id="demoNotice" hidden>离线演示 · 示例数据。空间动画请运行 visionOS App。</p>
+
+  <div class="banner" id="banner">需要重新登录（运行 pnpm hub login）</div>
+
+  <section class="card">
+    <h2>小红书数据</h2>
+    <div class="stats">
+      <div class="stat"><div class="v" id="followers">–</div><div class="l">粉丝</div><div class="d" id="delta"></div></div>
+      <div class="stat"><div class="v" id="likes">–</div><div class="l">获赞与收藏</div><div class="d"></div></div>
+      <div class="stat"><div class="v" id="notes">–</div><div class="l">笔记</div><div class="d"></div></div>
+    </div>
+    <svg class="spark" id="spark" viewBox="0 0 320 72" preserveAspectRatio="none" aria-label="粉丝历史"></svg>
+    <div class="meta"><span>更新于 <b id="updated">–</b></span><span>来源 <b id="source">–</b></span><span>下次抓取 <b id="next">–</b></span></div>
+  </section>
+
+  <section class="card">
+    <h2>设备</h2>
+    <div class="chips">
+      <span class="chip"><i class="dot" id="serialDot"></i><span id="serialText">串口 未连接</span></span>
+      <span class="chip"><i class="dot" id="bleDot"></i><span id="bleText">BLE –</span></span>
+      <span class="chip"><span id="battery">电池 –</span></span>
+      <span class="chip"><span id="mode">模式 –</span></span>
+      <span class="chip"><span id="deviceTheme">主题 –</span></span>
+      <span class="chip"><span id="vp">VP –</span></span>
+    </div>
+    <div class="small" id="serialDetail" style="margin-top:8px"></div>
+  </section>
+
+  <section class="card">
+    <h2>操作</h2>
+    <div class="grid">
+      <button id="btnScrape" class="wide">刷新（立即抓取）</button>
+    </div>
+    <div class="small" id="simulateHint" style="margin:12px 0 6px">模拟新粉丝（走真实抓取同一条链路：设备叮一声 + 翻页 + AR 庆祝）</div>
+    <div class="grid3">
+      <button data-delta="1" class="sim pink">+1</button>
+      <button data-delta="5" class="sim pink">+5</button>
+      <button data-delta="50" class="sim pink">+50</button>
+    </div>
+    <div class="grid" style="margin-top:10px">
+      <button id="btnReplay" class="secondary">展示动画</button>
+      <button id="btnCelebrate" class="amber">庆祝</button>
+      <button id="btnHide" class="secondary">隐藏名片</button>
+      <button id="btnShow" class="secondary">显示名片</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>主题选择</h2>
+    <div class="grid3" id="themes"></div>
+  </section>
+
+  <p class="small" id="foot"></p>
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  let state = null;
+  let toastTimer = null;
+
+  function toast(msg, ms = 2200) {
+    const t = $('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), ms);
+  }
+
+  function fmt(n) {
+    if (n === undefined || n === null) return '–';
+    return Number(n).toLocaleString('zh-CN');
+  }
+  function timeOf(ts) {
+    if (!ts) return '–';
+    const d = new Date(ts * 1000);
+    const now = Date.now();
+    const sameDay = new Date(now).toDateString() === d.toDateString();
+    return (sameDay ? '' : `${d.getMonth() + 1}/${d.getDate()} `) + d.toTimeString().slice(0, 5);
+  }
+  const SOURCES = { seed: '种子', scrape: '抓取', manual: '手动模拟', login: '登录', unknown: '未知' };
+
+  function drawSpark(history) {
+    const svg = $('spark');
+    const pts = (history || []).filter((h) => Number.isFinite(h.followers));
+    if (pts.length < 2) { svg.innerHTML = '<text x="8" y="40" fill="#94a0c4" font-size="12">暂无历史</text>'; return; }
+    const W = 320, H = 72, pad = 6;
+    const ys = pts.map((p) => p.followers);
+    let min = Math.min(...ys), max = Math.max(...ys);
+    if (max === min) { max += 1; min -= 1; }
+    const x = (i) => pad + (i / (pts.length - 1)) * (W - pad * 2);
+    const y = (v) => H - pad - ((v - min) / (max - min)) * (H - pad * 2);
+    const d = pts.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)} ${y(p.followers).toFixed(1)}`).join(' ');
+    const last = pts[pts.length - 1];
+    svg.innerHTML = `
+      <path d="${d} L${x(pts.length - 1).toFixed(1)} ${H - pad} L${pad} ${H - pad} Z" fill="rgba(94,232,255,.12)"/>
+      <path d="${d}" fill="none" stroke="#5ee8ff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      <circle cx="${x(pts.length - 1).toFixed(1)}" cy="${y(last.followers).toFixed(1)}" r="3.5" fill="#fff"/>
+      <text x="${pad}" y="12" fill="#94a0c4" font-size="10">${fmt(max)}</text>
+      <text x="${pad}" y="${H - 1}" fill="#94a0c4" font-size="10">${fmt(min)}</text>`;
+  }
+
+  function render(s) {
+    state = s;
+    $('demoNotice').hidden = !s.demo;
+    $('btnScrape').textContent = s.demo ? '刷新示例数据' : '刷新（立即抓取）';
+    $('simulateHint').textContent = s.demo ? '模拟一位新关注者，看看数字怎样变化。' : '模拟新粉丝（设备叮一声 + 翻页 + AR 庆祝）';
+    $('name').textContent = s.profile?.name || 'Spatial Card';
+    $('handle').textContent = s.profile?.handle || '';
+    $('banner').classList.toggle('show', !!s.needsLogin);
+    const st = s.stats || {};
+    $('followers').textContent = fmt(st.followers);
+    $('likes').textContent = fmt(st.likes);
+    $('notes').textContent = fmt(st.notes);
+    $('delta').textContent = st.delta > 0 ? `+${fmt(st.delta)}` : '';
+    $('updated').textContent = timeOf(st.ts);
+    $('source').textContent = s.demo ? '示例数据' : SOURCES[st.source] || st.source || '–';
+    const sch = s.scheduler || {};
+    $('next').textContent = sch.busy ? '抓取中…' : sch.nextRunAt ? timeOf(Math.floor(sch.nextRunAt / 1000)) : (sch.running ? '–' : '未启动');
+    drawSpark(s.history);
+
+    const dev = s.device || {};
+    const serial = s.serial || {};
+    $('serialDot').className = 'dot ' + (dev.connected ? (dev.ready ? 'on' : 'warn') : '');
+    $('serialText').textContent = dev.connected ? `串口 ${dev.ready ? '已连接' : '已打开，等待 hello'}` : `串口 ${serial.status === 'searching' ? '搜索中' : '未连接'}`;
+    $('bleDot').className = 'dot ' + (dev.bleConnected ? 'on' : '');
+    $('bleText').textContent = dev.connected ? `BLE ${dev.bleConnected ? '已连 Vision Pro' : '未连接'}` : 'BLE –';
+    const b = dev.battery;
+    $('battery').textContent = b ? `电池 ${b.soc}%${b.usb ? ' ⚡' : ''}` : '电池 –';
+    $('mode').textContent = `模式 ${dev.mode ? (dev.mode === 'ar' ? 'AR' : 'Idle') : '–'}`;
+    $('deviceTheme').textContent = `主题 ${labelOfTheme(dev.theme) || '–'}`;
+    $('vp').textContent = `VP ${s.vpClients ? `${s.vpClients} 个连接` : '未连接'}`;
+    $('serialDetail').textContent = [dev.transport ? `端口 ${dev.transport}` : '', dev.fw ? `固件 ${dev.fw}` : '', dev.heap ? `堆 ${Math.round(dev.heap / 1024)} KB` : '', serial.lastError ? `错误：${serial.lastError}` : ''].filter(Boolean).join(' · ');
+    renderThemes(s.themes || [], dev.theme);
+    const lr = sch.lastRun;
+    $('foot').textContent = lr ? `${s.demo ? '上次刷新' : '上次抓取'} ${timeOf(Math.floor(lr.finishedAt / 1000))}：${lr.status === 'ok' ? '成功' : lr.status === 'needsLogin' ? '需要登录' : '失败'}${lr.message ? ' — ' + lr.message : ''}` : '';
+  }
+
+  function labelOfTheme(id) {
+    const t = (state?.themes || []).find((x) => x.id === id);
+    return t ? `${t.label}` : id;
+  }
+
+  function renderThemes(themes, active) {
+    const box = $('themes');
+    const html = themes.map((t) => `<button class="theme secondary${t.id === active ? ' active' : ''}" data-theme="${t.id}">${t.label}<br><span class="small">${t.id}</span></button>`).join('');
+    if (box.innerHTML !== html) box.innerHTML = html;
+  }
+
+  async function post(path, body, okMsg) {
+    try {
+      const r = await fetch(path, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body || {}) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok && r.status !== 202) throw new Error(j.error || `HTTP ${r.status}`);
+      const dev = j.device;
+      const devNote = dev && dev.ok === false ? (dev.reason === 'disconnected' ? '（设备未连接）' : `（设备：${dev.err}）`) : dev === 'not connected' ? '（设备未连接）' : '';
+      if (j.run) toast(j.run.status === 'ok' ? `${state?.demo ? '示例已刷新' : '抓取成功'} ${j.run.message || ''}` : j.run.status === 'needsLogin' ? '需要重新登录' : `抓取失败：${j.run.message || ''}`, 3500);
+      else toast((okMsg || '完成') + devNote);
+      refresh();
+      return j;
+    } catch (err) {
+      toast(`失败：${err.message}`, 3500);
+    }
+  }
+
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    if (btn.id === 'btnScrape') { btn.disabled = true; toast('抓取中…', 6000); post('/api/scrape', {}, '抓取完成').finally(() => (btn.disabled = false)); }
+    else if (btn.classList.contains('sim')) post('/api/simulate', { delta: Number(btn.dataset.delta) }, `模拟新粉丝 +${btn.dataset.delta}`);
+    else if (btn.id === 'btnReplay') post('/api/cmd', { c: 'replay' }, '已发送 replay');
+    else if (btn.id === 'btnHide') post('/api/cmd', { c: 'hide' }, '已发送 hide（名片收进设备）');
+    else if (btn.id === 'btnShow') post('/api/cmd', { c: 'show' }, '已发送 show（名片回到桌面）');
+    else if (btn.id === 'btnCelebrate') post('/api/celebrate', {}, '已发送庆祝');
+    else if (btn.dataset.theme) post('/api/theme', { theme: btn.dataset.theme }, `主题 → ${btn.dataset.theme}`);
+  });
+
+  async function refresh() {
+    try {
+      const r = await fetch('/api/state');
+      render(await r.json());
+    } catch (err) {
+      $('serialText').textContent = 'Hub 不可达';
+    }
+  }
+
+  let ws = null;
+  function connectWs() {
+    try {
+      ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ui`);
+      ws.onmessage = (ev) => { try { const m = JSON.parse(ev.data); if (m.t === 'state') render(m.state); } catch {} };
+      ws.onclose = () => setTimeout(connectWs, 2000);
+      ws.onerror = () => ws.close();
+    } catch { setTimeout(connectWs, 3000); }
+  }
+
+  refresh();
+  connectWs();
+  setInterval(refresh, 15000);
+})();
+</script>
+</body>
+</html>

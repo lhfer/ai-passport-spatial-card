@@ -1,0 +1,38 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 3.0, "position": [0, 1.05, -0.6], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.042,
+   "note": "1 desk: flat and still, no hand near it (expect the scan, the cinematic and [notes] fan out 10 cards)"},
+
+  {"fromSeconds": 3.0, "toSeconds": 3.6, "position": [0, 1.05, -0.6], "toPosition": [0.05, 1.22, -0.62],
+   "eulerDeg": [0, 0, 0], "toEulerDeg": [62, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 5.0, "surfaceY": 1.042,
+   "hand": {"side": "right", "position": [0, 1.02, -0.6], "toPosition": [0.05, 1.19, -0.62]},
+   "note": "2 picked up to 62 deg, the RIGHT wrist 3 cm under the device (the bridge learns T_hand->device here)"},
+  {"fromSeconds": 3.6, "toSeconds": 6.5, "position": [0.05, 1.22, -0.62], "toPosition": [0.02, 1.21, -0.60],
+   "eulerDeg": [62, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "hand": {"side": "right", "position": [0.05, 1.19, -0.62], "toPosition": [0.02, 1.18, -0.60]},
+   "note": "3 carried in the hand, object tracked: the grip is low-passed over 2.9 s"},
+
+  {"fromSeconds": 6.5, "toSeconds": 8.0, "position": [0.02, 1.21, -0.60], "toPosition": [0, 1.052, -0.6],
+   "eulerDeg": [62, 0, 0], "toEulerDeg": [2, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "hand": {"side": "right", "position": [0.02, 1.18, -0.60], "toPosition": [0, 1.02, -0.6]},
+   "note": "4 the passport is lowered flat onto the desk, still tracked, the hand still on it"},
+
+  {"fromSeconds": 8.0, "toSeconds": 9.5, "position": [0, 1.05, -0.6], "eulerDeg": [0, 0, 0],
+   "tracked": false, "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "hand": {"side": "right", "position": [0, 1.02, -0.6], "toPosition": [0.30, 1.10, -0.55]},
+   "note": "5 THE PUT-DOWN OCCLUSION (round 3's 'it follows the wrist onto the desk too'): the passport is ON THE DESK and untracked for 1.5 s while the hand that put it there withdraws 30 cm. --bridge off (the default): the card holds where it was last seen, [reveal] holding (object lost) at +0.3 s, [reveal] following again (1.5 s) when the object returns, NO [hand] bridge on. --bridge on: [hand] bridge on (right, ...) and the card leaves with the wrist"},
+
+  {"fromSeconds": 9.5, "toSeconds": 13.0, "position": [0, 1.05, -0.6], "eulerDeg": [0, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 0.8, "surfaceY": 1.042,
+   "hand": {"side": "right", "position": [0.30, 1.10, -0.55], "toPosition": [0.34, 1.12, -0.52]},
+   "note": "6 the object is back, flat and still on the desk, the hand 30+ cm away (expect settling -> expanded and NO [timing] pick-up line: a put-down occlusion is not a pick-up)"},
+
+  {"fromSeconds": 13.0, "toSeconds": 14.2, "position": [0, 1.05, -0.6], "eulerDeg": [0, 0, 0],
+   "tracked": false, "source": "object", "rateHz": 30, "jitterMm": 0.8, "surfaceY": 1.042,
+   "hand": {"side": "right", "position": [0.34, 1.12, -0.52], "toPosition": [0.36, 1.13, -0.50]},
+   "note": "7 A DESK LOSS (V3-6 section 4): the passport is lying still and the camera loses it for 1.2 s with both wrists 35+ cm away - nobody is picking anything up. Expect [reveal] holding (object lost) at +0.3 s and, when it comes back, [timing] desk loss 1.2 s - and NOT a pick-up line"},
+
+  {"fromSeconds": 14.2, "toSeconds": 24.0, "position": [0, 1.05, -0.6], "eulerDeg": [0, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 0.8, "surfaceY": 1.042,
+   "hand": {"side": "right", "position": [0.36, 1.13, -0.50], "toPosition": [0.38, 1.14, -0.48]},
+   "note": "8 back on the desk for good (expect [reveal] following again (1.2 s) and the desk form)"}
+]

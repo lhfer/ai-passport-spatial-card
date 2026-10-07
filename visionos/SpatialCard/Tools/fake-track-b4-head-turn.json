@@ -1,0 +1,11 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 26.0, "position": [0, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.20, -0.30]}, "head": [0, 1.59, 0],
+   "note": "v4 B4 §3.3 a turn of the view at the desk: 1 on the desk — the recognition, the gallery, and the two worlds prebuilt in the quiet (expect prebuilt … out of the scene tree)"},
+  {"fromSeconds": 26.0, "toSeconds": 27.0, "position": [0, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.20, -0.30]}, "head": [0, 1.59, 0], "toHead": [0.14, 1.59, 0.02],
+   "note": "2 the wearer leans 14 cm to the right: the head → card direction turns ≈ 13° (B3 dropped and rebuilt both worlds past 6°)"},
+  {"fromSeconds": 27.0, "toSeconds": 70.0, "position": [0, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.20, -0.30]}, "head": [0.14, 1.59, 0.02],
+   "note": "3 still leaning; UP lands on a world coin, OK enters it (expect no `prebuilt … dropped`, and at the entry `prebuilt root … turned … about the card to the current view (no rebuild)`)"}
+]

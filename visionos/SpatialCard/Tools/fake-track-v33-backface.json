@@ -1,0 +1,37 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 3.0, "position": [0, 1.30, -0.75], "eulerDeg": [0, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "note": "1 desk: flat and still (expect the box scan, the cinematic and the gallery)"},
+
+  {"fromSeconds": 3.0, "toSeconds": 3.6, "position": [0, 1.30, -0.75], "toPosition": [0.02, 1.42, -0.70],
+   "eulerDeg": [0, 0, 0], "toEulerDeg": [90, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 4.0, "surfaceY": 1.292,
+   "note": "2 picked up and stood upright (screen facing the wearer): the pick-up morph and the hand deck"},
+
+  {"fromSeconds": 3.6, "toSeconds": 8.0, "position": [0.02, 1.42, -0.70], "eulerDeg": [90, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.292,
+   "note": "3 held still at 0.72 m from the head: expect [hand] far hold 0.72 m one second in (E9)"},
+
+  {"fromSeconds": 8.0, "toSeconds": 10.0, "position": [0.02, 1.42, -0.70],
+   "eulerDeg": [90, 0, 0], "toEulerDeg": [90, -180, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.292,
+   "note": "4 THE ROLL: 180 deg about the passport's own long axis. Because the device is upright, a yaw in this script IS a roll of the card, and the screen normal stays horizontal the whole way (tilt 90 deg) - so the flip never trips the 120 deg face-down anticipation. Expect [reveal] back face"},
+
+  {"fromSeconds": 10.0, "toSeconds": 14.0, "position": [0.02, 1.42, -0.70], "eulerDeg": [90, -180, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.292,
+   "note": "5 held turned away: the QR is up (shot-back-face.png)"},
+
+  {"fromSeconds": 14.0, "toSeconds": 16.0, "position": [0.02, 1.42, -0.70],
+   "eulerDeg": [90, -180, 0], "toEulerDeg": [90, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.292,
+   "note": "6 rolled back: expect [reveal] front face"},
+
+  {"fromSeconds": 16.0, "toSeconds": 17.5, "position": [0.02, 1.42, -0.70], "toPosition": [0.02, 1.50, -0.40],
+   "eulerDeg": [90, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.292,
+   "note": "7 brought back in close (0.41 m): expect [hand] near again"},
+
+  {"fromSeconds": 17.5, "toSeconds": 30.0, "position": [0.02, 1.50, -0.40], "eulerDeg": [90, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.292,
+   "note": "8 held close. Runs to 30 s so --exit-after 24 never races the end of the script (V3-2b B6's lesson)"}
+]

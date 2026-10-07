@@ -1,0 +1,25 @@
+[
+  {"fromSeconds": 0.0,  "toSeconds": 6.0,  "position": [0, 1.14, -1.00], "eulerDeg": [15, 0, 0],
+   "source": "object", "rateHz": 30, "objectOffset": [0.08, 0, 0],
+   "note": "1 G2 rules 1+4: object ONLY, no image at all, and the object tracker reports the flat device tilted 15 deg. Expect: nothing until objectLeadAfter, then [obj] source -> object at ~2 s, absent -> acquiring -> expanded (cinematic) with src=obj cal=no, Sigma tilt<=2 deg next to objTilt=15.0 deg. The card sits 8 cm off (-X) because nothing has measured objectToScreen yet"},
+
+  {"fromSeconds": 6.0,  "toSeconds": 20.0, "position": [0, 1.14, -1.00],
+   "note": "2a the image finally appears, 8 cm from where the object-first guess put the card. Expect [obj] source -> image (8.0 cm apart) + [obj] object-first correction 8.0 cm, then the continuity gate holds it for jumpAcceptAfter and accepts: thaw(8.0 cm) + [follow] relocate"},
+  {"fromSeconds": 6.0,  "toSeconds": 20.0, "position": [0, 1.14, -1.00], "eulerDeg": [15, 0, 0],
+   "source": "object", "rateHz": 30, "objectOffset": [0.08, 0, 0],
+   "note": "2b co-observation: the object is still tilted 15 deg, the image is flat. Rule 2 measures the offset against the object's GRAVITY-ALIGNED frame, so the 15 deg never reaches it (expect [obj] calibrated: offset (80.0, 0.0, 0.0) mm, yaw 0.0 deg, N=60, then src -> object with 0.0 cm apart)"},
+
+  {"fromSeconds": 20.0, "toSeconds": 26.0, "position": [0, 1.14, -1.00], "eulerDeg": [70, 0, 0], "rateHz": 8,
+   "note": "3a G2 rule 5: in hand the IMAGE is the one that lies. It keeps reporting the card back on the desk at 8 Hz - fresh enough (0.125 s) to have vetoed every hand-over in the first trial"},
+  {"fromSeconds": 20.0, "toSeconds": 20.8, "position": [0, 1.14, -1.00], "toPosition": [0.25, 1.30, -0.85],
+   "eulerDeg": [0, 0, 0], "toEulerDeg": [70, 0, 0],
+   "source": "object", "rateHz": 30, "objectOffset": [0.08, 0, 0],
+   "note": "3b the device is picked up over 0.8 s. Past the desk gate's exit angle (35 deg) the full object orientation is used again (expect carrying(notFlat), src=obj, objTilt climbing to 70 deg)"},
+  {"fromSeconds": 20.8, "toSeconds": 21.0, "position": [0.25, 1.30, -0.85], "eulerDeg": [70, 0, 0],
+   "source": "object", "rateHz": 30, "objectOffset": [0.08, 0, 0],
+   "note": "3c held still in the hand"},
+
+  {"fromSeconds": 21.6, "toSeconds": 26.0, "position": [0.25, 1.30, -0.85], "eulerDeg": [70, 0, 0],
+   "source": "object", "rateHz": 30, "objectOffset": [0.08, 0, 0],
+   "note": "3d after a 0.6 s object gap (src falls back to the lying image and the card snaps back to the desk) the object returns 33 cm away while carrying. Expect [obj] source -> object (33.x cm apart) with NO 'sources disagree' line - that veto is what kept the card on the image for whole carries in the first trial"}
+]

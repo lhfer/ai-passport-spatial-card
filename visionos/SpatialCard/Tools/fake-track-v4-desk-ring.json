@@ -1,0 +1,12 @@
+[
+  {
+    "fromSeconds": 0.0,
+    "toSeconds": 40.0,
+    "position": [0, 1.30, -0.62],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 0.5,
+    "surfaceY": 1.292,
+    "note": "v4 B2 §2 desk ring smoke (with fake-device-v4-desk-ring.json or fake-device-v4-preview-close.json): flat and still on a desk at 1.30 m, 0.62 m ahead, for the whole run. Expect the recognition, the gallery, [desk] hint (first gallery), a desk prebuild in the quiet before the first press, then the device script's presses as [desk] ring → … / [ble] ok → … lines, and 0 [footprint] findings"
+  }
+]

@@ -1,0 +1,435 @@
+{
+  "id": "neon-city",
+  "name": "霓虹雨城",
+  "subtitle": "雨夜天台，你的名片是整座城的广告牌",
+  "icon": "building.2.crop.circle",
+  "palette": {
+    "background": "#070A18",
+    "primary": "#FF3CB0",
+    "secondary": "#2EE6FF",
+    "highlight": "#FFF4FA",
+    "accent": "#FFB03A"
+  },
+  "immersion": {
+    "shellOpacity": 1.0,
+    "shellColor": "#0B1030"
+  },
+  "entry": {
+    "kind": "tear",
+    "duration": 3.4
+  },
+  "exit": {
+    "kind": "crtCollapse",
+    "duration": 2.6
+  },
+  "audio": {
+    "ambient": "worldRainAmbient",
+    "entry": "tear",
+    "exit": "crtOff"
+  },
+  "exitLabel": "返回桌面",
+  "hologramTint": "#FF3CB0",
+  "environment": {
+    "hdri": "shanghai_bund_1k",
+    "iblIntensity": 0.8,
+    "sky": "neon_sky",
+    "skyTint": "#A0A4CC",
+    "skyRadius": 90,
+    "skyOnShell": false
+  },
+  "textures": [
+    "neon_asphalt_diff",
+    "neon_asphalt_nor",
+    "neon_asphalt_rough"
+  ],
+  "stats": {
+    "celebrateCap": 300,
+    "tickerDigits": 6
+  },
+  "take": {
+    "trainPeriod": 16,
+    "trainFirst": 1.5,
+    "miniCardAt": 0.8
+  },
+  "placements": [
+    {
+      "asset": "neon_street_lamp",
+      "at": [
+        2.8,
+        -2.0,
+        0
+      ],
+      "yaw": 20,
+      "scale": 0.7
+    },
+    {
+      "asset": "neon_street_lamp",
+      "at": [
+        2.8,
+        2.0,
+        0
+      ],
+      "yaw": -20,
+      "scale": 0.7
+    },
+    {
+      "asset": "neon_wet_floor_sign",
+      "at": [
+        2.3,
+        1.4,
+        0
+      ],
+      "yaw": -25
+    },
+    {
+      "asset": "neon_trash_can",
+      "at": [
+        3.4,
+        -1.9,
+        0
+      ],
+      "yaw": 15
+    },
+    {
+      "asset": "neon_generator",
+      "at": [
+        4.6,
+        2.3,
+        0
+      ],
+      "yaw": -30
+    },
+    {
+      "asset": "neon_ac_unit",
+      "at": [
+        5.4,
+        3.2,
+        0
+      ],
+      "yaw": -90
+    },
+    {
+      "asset": "neon_ac_unit",
+      "at": [
+        5.4,
+        4.1,
+        0
+      ],
+      "yaw": -90
+    },
+    {
+      "asset": "neon_ac_unit_rusted",
+      "at": [
+        6.6,
+        3.6,
+        0
+      ],
+      "yaw": -84,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_pipes",
+      "at": [
+        4.0,
+        7.0,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "asset": "neon_barrel",
+      "at": [
+        6.3,
+        -1.2,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "neon_barrel",
+      "at": [
+        6.85,
+        -1.7,
+        0
+      ],
+      "yaw": 40
+    },
+    {
+      "asset": "neon_utility_box",
+      "at": [
+        7.25,
+        -2.5,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "asset": "neon_utility_box",
+      "at": [
+        7.25,
+        -3.1,
+        0
+      ],
+      "yaw": 0,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_duct",
+      "at": [
+        5.4,
+        -4.9,
+        0
+      ],
+      "yaw": 20,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_barrel",
+      "at": [
+        -2.8,
+        -4.3,
+        0
+      ],
+      "yaw": 0,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_barrel",
+      "at": [
+        -3.35,
+        -4.95,
+        0
+      ],
+      "yaw": 40,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_barrel",
+      "at": [
+        -2.35,
+        -5.0,
+        0
+      ],
+      "yaw": 100,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_pipes",
+      "at": [
+        -1.0,
+        -6.9,
+        0
+      ],
+      "yaw": 90,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_utility_box",
+      "at": [
+        -4.1,
+        -2.4,
+        0
+      ],
+      "yaw": 0,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_far_tower_a",
+      "at": [
+        7,
+        -18,
+        -25
+      ],
+      "yaw": 6
+    },
+    {
+      "asset": "neon_water_tower",
+      "at": [
+        8.5,
+        -16.6,
+        -5.4
+      ],
+      "yaw": 20
+    },
+    {
+      "asset": "neon_chimney",
+      "at": [
+        5.6,
+        -19.6,
+        -5.4
+      ],
+      "yaw": 0,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_far_tower_b",
+      "at": [
+        17,
+        -22,
+        -25
+      ],
+      "yaw": -4
+    },
+    {
+      "asset": "neon_far_tower_c",
+      "at": [
+        27,
+        -17,
+        -25
+      ],
+      "yaw": 10,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_chimney",
+      "at": [
+        27.5,
+        -16.4,
+        1.4
+      ],
+      "yaw": 0,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_far_tower_a",
+      "at": [
+        -7,
+        -20,
+        -25
+      ],
+      "yaw": -8,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_tank",
+      "at": [
+        -7,
+        -20,
+        -5.4
+      ],
+      "yaw": 30,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_far_tower_d",
+      "at": [
+        -19,
+        -17,
+        -25
+      ],
+      "yaw": 15,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_far_tower_a",
+      "at": [
+        4,
+        21,
+        -25
+      ],
+      "yaw": -6
+    },
+    {
+      "asset": "neon_water_tower",
+      "at": [
+        3,
+        22.2,
+        -5.4
+      ],
+      "yaw": -35
+    },
+    {
+      "asset": "neon_far_tower_c",
+      "at": [
+        13,
+        25,
+        -25
+      ],
+      "yaw": 4
+    },
+    {
+      "asset": "neon_chimney",
+      "at": [
+        13.6,
+        24.4,
+        1.4
+      ],
+      "yaw": 0,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_far_tower_b",
+      "at": [
+        29,
+        23,
+        -25
+      ],
+      "yaw": -12
+    },
+    {
+      "asset": "neon_far_tower_b",
+      "at": [
+        -9,
+        19,
+        -25
+      ],
+      "yaw": 8,
+      "minTier": 2
+    },
+    {
+      "asset": "neon_far_tower_a",
+      "at": [
+        -19,
+        9,
+        -25
+      ],
+      "yaw": -20,
+      "minTier": 1
+    },
+    {
+      "asset": "neon_tank",
+      "at": [
+        -19,
+        9,
+        -5.4
+      ],
+      "yaw": -10,
+      "minTier": 2
+    },
+    {
+      "asset": "neon_far_tower_c",
+      "at": [
+        -22,
+        -3,
+        -25
+      ],
+      "yaw": 3,
+      "minTier": 2
+    },
+    {
+      "asset": "neon_far_tower_d",
+      "at": [
+        -24,
+        6,
+        -25
+      ],
+      "yaw": -5,
+      "minTier": 2
+    }
+  ],
+  "fog": [
+    {
+      "distance": 14,
+      "height": 30,
+      "color": "#1A1440",
+      "opacity": 0.22
+    },
+    {
+      "distance": 26,
+      "height": 40,
+      "color": "#231A55",
+      "opacity": 0.3,
+      "minTier": 1
+    }
+  ]
+}

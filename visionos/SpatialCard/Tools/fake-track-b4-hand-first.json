@@ -1,0 +1,8 @@
+[
+  {"fromSeconds": 1.0, "toSeconds": 20.0, "position": [0.03, 1.40, -0.55], "toPosition": [0.05, 1.41, -0.54], "eulerDeg": [62, 0, 0], "toEulerDeg": [56, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 2.0, "surfaceY": 1.292,
+   "note": "v4 B4 §1: the passport is first seen in the hand, tilted 62° toward the eyes (expect [v4] recognition #1: the hand's path (tilt 62° > 45°), acquiring → carrying(notFlat), the outline on the hinge, [v4] hand reveal at the closure — no unfold — and the deck rising out of the card)"},
+  {"fromSeconds": 20.0, "toSeconds": 20.6, "position": [0.05, 1.41, -0.54], "toPosition": [0.04, 1.30, -0.60], "eulerDeg": [56, 0, 0], "toEulerDeg": [0, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 2.0, "surfaceY": 1.292,
+   "note": "2 put down flat on the desk"},
+  {"fromSeconds": 20.6, "toSeconds": 34.0, "position": [0.04, 1.30, -0.60], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "note": "3 on the desk: the settle, the deck blooms into the gallery (the hand reveal's state hands over to the desk as the unfold's did)"}
+]

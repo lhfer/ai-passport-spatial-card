@@ -1,0 +1,12 @@
+[
+  {
+    "fromSeconds": 0.0,
+    "toSeconds": 34.0,
+    "position": [0, 1.30, -0.62],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 0.5,
+    "surfaceY": 1.292,
+    "note": "v4 B1 recognition smoke (with fake-device-v4-recognition.json): flat and still on a desk at 1.30 m, 0.62 m ahead (in the simulator camera's view) for the whole run. Expect [v4] recognition start, beats burst / launch / outline / closure (→ cinematic) / hand-over / done in order, [ble] glow flash, [v4] reveal (count 4401 lands 1.59 s after the closure = 3.49 s after the recognition started), [v4] entrance (reveal) complete, [notes] fan out 10 cards, [perf] v4 recognition + reveal, [perf] v4 desk idle 5 s + scene (after the world prebuilds), the +12 celebration at 18.5 s rolling 4,401 → 4,413 (only the tens and ones reels), OK at 21.5 s folding the card into the device, OK at 24 s summoning it (0.6 s box scan → [v4] reentry: rise off the screen), and 0 [footprint] findings"
+  }
+]

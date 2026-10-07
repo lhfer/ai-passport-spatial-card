@@ -1,0 +1,50 @@
+{
+  "name": "spatial-hub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mac hub for the Spatial Card: scrapes Xiaohongshu stats, drives the AI Passport over USB serial, serves the director's remote, and renders the theme screens.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "hub": "tsx src/main.ts",
+    "dev": "tsx src/main.ts start",
+    "start": "tsx src/main.ts start",
+    "login": "tsx src/main.ts login",
+    "scrape": "tsx src/main.ts scrape",
+    "send": "tsx src/main.ts send",
+    "monitor": "tsx src/main.ts monitor",
+    "screens": "tsx tools/render-screens.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "demo": "tsx src/main.ts demo"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.9",
+    "@resvg/resvg-js": "^2.6.2",
+    "@serialport/parser-readline": "^13.0.0",
+    "hono": "^4.10.0",
+    "playwright": "^1.63.0",
+    "pngjs": "^7.0.0",
+    "serialport": "^13.0.0",
+    "ws": "^8.18.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/pngjs": "^6.0.5",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@serialport/bindings-cpp",
+      "esbuild",
+      "playwright"
+    ]
+  },
+  "packageManager": "pnpm@10.32.1"
+}

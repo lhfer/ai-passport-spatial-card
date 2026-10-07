@@ -1,0 +1,20 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 14.0, "position": [0, 1.05, -0.6], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.042,
+   "note": "v4 B5 §1 cmd perf layers stay off across the desk and the hand until reset: 1 desk (the recognition, the gallery; the switches go off at 10 s)"},
+  {"fromSeconds": 14.0, "toSeconds": 14.6, "position": [0, 1.05, -0.6], "toPosition": [0.06, 1.22, -0.65], "eulerDeg": [0, 0, 0], "toEulerDeg": [60, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 5.0, "surfaceY": 1.042,
+   "note": "2 picked up (the pick-up morph: the deck must come out with the gallery's glass, twinkle, trails, cones still off)"},
+  {"fromSeconds": 14.6, "toSeconds": 21.0, "position": [0.06, 1.22, -0.65], "toPosition": [0.1, 1.2, -0.62], "eulerDeg": [60, 0, 0], "toEulerDeg": [58, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "3 in the hand"},
+  {"fromSeconds": 21.0, "toSeconds": 21.6, "position": [0.1, 1.2, -0.62], "toPosition": [0.02, 1.05, -0.6], "eulerDeg": [58, 0, 0], "toEulerDeg": [0, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 2.0, "surfaceY": 1.042,
+   "note": "4 put down (the put-down bloom: still off)"},
+  {"fromSeconds": 21.6, "toSeconds": 30.0, "position": [0.02, 1.05, -0.6], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.042,
+   "note": "5 desk again"},
+  {"fromSeconds": 30.0, "toSeconds": 30.6, "position": [0.02, 1.05, -0.6], "toPosition": [0.08, 1.22, -0.64], "eulerDeg": [0, 0, 0], "toEulerDeg": [60, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 5.0, "surfaceY": 1.042,
+   "note": "6 picked up again"},
+  {"fromSeconds": 30.6, "toSeconds": 36.0, "position": [0.08, 1.22, -0.64], "toPosition": [0.1, 1.2, -0.62], "eulerDeg": [60, 0, 0], "toEulerDeg": [58, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "7 in the hand"},
+  {"fromSeconds": 36.0, "toSeconds": 36.6, "position": [0.1, 1.2, -0.62], "toPosition": [0.0, 1.05, -0.6], "eulerDeg": [58, 0, 0], "toEulerDeg": [0, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 2.0, "surfaceY": 1.042,
+   "note": "8 put down again; reset at 44 s gives everything back"},
+  {"fromSeconds": 36.6, "toSeconds": 56.0, "position": [0.0, 1.05, -0.6], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.042,
+   "note": "9 desk to the end"}
+]

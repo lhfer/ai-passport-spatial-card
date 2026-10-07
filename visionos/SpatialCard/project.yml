@@ -1,0 +1,140 @@
+# XcodeGen spec for the Spatial Card visionOS app.
+# Generate the Xcode project with:  brew install xcodegen && xcodegen
+#
+# Toolchain this was written against: Xcode 26.6, Swift 6.3 compiler, visionOS SDK 26.5,
+# xcodegen 2.45.3. Deployment target is visionOS 27.0: the only headset runs 27 and the FX branch
+# uses 27-only APIs (BloomComponent, ClippingComponent feathering). Build with Xcode 27 beta.
+name: SpatialCard
+
+options:
+  bundleIdPrefix: org.spatialcard
+  deploymentTarget:
+    visionOS: "27.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: false
+  xcodeVersion: "26.6"
+
+settings:
+  base:
+    # Swift 5 language mode + minimal strict-concurrency checking: the ARKit/RealityKit
+    # update loops are already annotated with @MainActor, but this keeps the Swift 6.3
+    # compiler from turning any remaining Sendable warnings into hard errors.
+    SWIFT_VERSION: "5.0"
+    SWIFT_STRICT_CONCURRENCY: minimal
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    # Set your own team in Xcode or pass DEVELOPMENT_TEAM at build time.
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: "Apple Development"
+
+targets:
+  SpatialCard:
+    type: application
+    platform: visionOS
+    deploymentTarget: "27.0"
+    sources:
+      - path: Sources
+      # card.json and Assets.xcassets are bundle resources; the ARKit reference image lives
+      # inside Assets.xcassets/CardReference.arresourcegroup.
+      - path: Resources
+        excludes:
+          - "worlds/**"
+          - "objects/**"
+      # World descriptors + per-world USDZ / HDRI / textures, kept as a folder reference so the
+      # bundle preserves worlds/<id>/... (assets of different worlds may share file names).
+      - path: Resources/worlds
+        type: folder
+      # 工作包 G: the Create ML `.referenceobject` for the AI Passport, as a folder reference so the bundle keeps
+      # `objects/<name>.referenceobject` (a reference object is a package directory, and `ReferenceObject(from:)`
+      # wants the whole thing). The sanitized Extended model is bundled here. Without a reference object, `ObjectTrackingProvider`
+      # is never constructed and the app runs image-only, which is exactly what it must keep doing.
+      - path: Resources/objects
+        type: folder
+      # Scripted `--fake-device` / `--fake-hub` events. They ship in the bundle (flat, at its root) because
+      # the app's working directory is not the repo: a relative path on the command line resolves against
+      # `/`, so `--fake-device fake-device-events.json` is the spelling that works everywhere.
+      - path: Tools
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.spatialcard.spatialcard
+        PRODUCT_NAME: SpatialCard
+        INFOPLIST_FILE: Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SUPPORTED_PLATFORMS: "xros xrsimulator"
+        TARGETED_DEVICE_FAMILY: "7"
+        ENABLE_PREVIEWS: YES
+        LD_RUNPATH_SEARCH_PATHS:
+          - "$(inherited)"
+          - "@executable_path/Frameworks"
+    scheme:
+      testTargets:
+        - SpatialCardTests
+      gatherCoverageData: false
+
+  # Pure-logic unit tests: PresenceGate is compiled straight into the bundle (no app host, no ARKit), so the
+  # scenarios in Tests/ run on the simulator without opening the immersive space.
+  SpatialCardTests:
+    type: bundle.unit-test
+    platform: visionOS
+    deploymentTarget: "27.0"
+    sources:
+      - path: Tests
+      - path: Sources/Tracking/PresenceGate.swift
+      # `PoseFollower` is deliberately ARKit/RealityKit-free (simd + Foundation only) so it compiles here too.
+      - path: Sources/Tracking/PoseFollower.swift
+      # 工作包 G: the hybrid tracker's source-selection policy and the object→screen calibration maths are pure
+      # too (no ARKit — the ObjectTrackingProvider wiring around them lives in CardTracker), so they are checked
+      # here rather than first on the headset.
+      - path: Sources/Tracking/TrackingFusion.swift
+      # v3 H1: the screen frame read off the object anchor's bounding box, and the device-pose gestures, are
+      # both pure value types for the same reason — object tracking does not exist in the simulator at all.
+      - path: Sources/Tracking/ObjectScreenFrame.swift
+      - path: Sources/Tracking/DeviceGestures.swift
+      # v3 H2: which way the hand-held card faces (`device` has to equal the base orientation exactly).
+      - path: Sources/Tracking/HandFacing.swift
+      # Same rule for the mini card's geometry + lazy head follow (工作包 C).
+      - path: Sources/Tracking/MiniCardFollow.swift
+      # 工作包 D: the note fan's geometry and its rules are pure too (no RealityKit, no AppModel), so the
+      # arc's spacing and the "when is the fan out" table are checked here instead of on the headset.
+      - path: Sources/Model/NoteFanLayout.swift
+      - path: Sources/Model/NoteFanMachine.swift
+      # v3 H2 §8: the hand card's page ring.
+      - path: Sources/Model/HandPager.swift
+      # V3-2a H0 / H3: the footprint prism the "hardware stays visible" rule is measured against, and the
+      # hand deck's slot geometry. Both pure (simd + Foundation), both checked here.
+      - path: Sources/Model/DeviceFootprint.swift
+      - path: Sources/Model/HandDeckLayout.swift
+      # V3-2a2 S1 / S3: the recognition scan's clock (and the easing curves it is written in), and where the
+      # three button glints stand relative to the device's own edge.
+      - path: Sources/Model/Easing.swift
+      - path: Sources/Model/BoxScanTimeline.swift
+      - path: Sources/Model/ButtonGlintLayout.swift
+      # V3-4 §1: the edge wave's contour, its 24 slots and the per-slot delay from the key that was pressed.
+      - path: Sources/Model/ButtonWaveLayout.swift
+      # V3-4 §7: the 1€ filter the object stream is smoothed with (pure simd + Foundation).
+      - path: Sources/Model/OneEuroFilter.swift
+      # V3-2a2 S2: the `glow` command's wire format, and the fake link's ack rule.
+      - path: Sources/Model/CardStats.swift
+      - path: Sources/Device/DeviceProtocol.swift
+      # V3-2b B1 / B6: the deck strip's dwell debounce, and the hand bridge's whole rule.
+      - path: Sources/Model/StripDwell.swift
+      - path: Sources/Model/HandBridge.swift
+      # V3-6 §4: which clock a loss of object tracking belongs to (the pick-up's or the desk's).
+      - path: Sources/Model/LossClock.swift
+      # V3-3 C1 / C2: the rim's Fresnel curve, and the three-sheet contract the RealityView and the
+      # controller both read (one mode, three ids, three depths).
+      - path: Sources/Model/RimFresnel.swift
+      - path: Sources/Model/CardLayers.swift
+      # 工作包 A 设备联动: when the device rings along with the card is decided from the presence stream alone.
+      - path: Sources/Device/DeviceCueRules.swift
+      # v4: every pure-logic file lives in Sources/V4/Pure/ and is tested here without touching this list.
+      - path: Sources/V4/Pure
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.spatialcard.spatialcard.tests
+        SUPPORTED_PLATFORMS: "xros xrsimulator"
+        TARGETED_DEVICE_FAMILY: "7"
+        GENERATE_INFOPLIST_FILE: YES

@@ -1,0 +1,122 @@
+[
+ {
+  "fromSeconds": 0.0,
+  "toSeconds": 3.0,
+  "position": [
+   0,
+   1.05,
+   -0.72
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 0.5,
+  "surfaceY": 1.042,
+  "note": "1 flat on the desk, still (reveal)"
+ },
+ {
+  "fromSeconds": 3.0,
+  "toSeconds": 3.6,
+  "position": [
+   0,
+   1.05,
+   -0.72
+  ],
+  "toPosition": [
+   0.06,
+   1.22,
+   -0.8
+  ],
+  "eulerDeg": [
+   0,
+   0,
+   0
+  ],
+  "toEulerDeg": [
+   58,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 5.0,
+  "surfaceY": 1.042,
+  "note": "2 picked up (hand form)"
+ },
+ {
+  "fromSeconds": 3.6,
+  "toSeconds": 34.0,
+  "position": [
+   0.06,
+   1.22,
+   -0.8
+  ],
+  "toPosition": [
+   0.12,
+   1.23,
+   -0.78
+  ],
+  "eulerDeg": [
+   58,
+   0,
+   0
+  ],
+  "toEulerDeg": [
+   54,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 3.0,
+  "surfaceY": 1.042,
+  "note": "3 stays in the hand the whole time: DOWN 13 s -> world page, OK 14 s -> enter neon-city, long OK 28 s -> exit (expect the card to come home to the HAND, not the desk, and no note fan)"
+ },
+ {
+  "fromSeconds": 34.0,
+  "toSeconds": 35.0,
+  "position": [
+   0.12,
+   1.23,
+   -0.78
+  ],
+  "toPosition": [
+   0.02,
+   1.05,
+   -0.7
+  ],
+  "eulerDeg": [
+   54,
+   0,
+   0
+  ],
+  "toEulerDeg": [
+   0,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 4.0,
+  "surfaceY": 1.042,
+  "note": "4 put back down on the desk (V3-5 \u00a77b: the settle is what resets the world tint)"
+ },
+ {
+  "fromSeconds": 35.0,
+  "toSeconds": 42.0,
+  "position": [
+   0.02,
+   1.05,
+   -0.7
+  ],
+  "eulerDeg": [
+   0,
+   0,
+   0
+  ],
+  "source": "object",
+  "rateHz": 30,
+  "jitterMm": 0.5,
+  "surfaceY": 1.042,
+  "note": "5 flat and still again -> settling -> expanded"
+ }
+]

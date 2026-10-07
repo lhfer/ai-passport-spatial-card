@@ -1,0 +1,8 @@
+[
+  {"fromSeconds": 8.0, "toSeconds": 8.25, "position": [0, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "note": "v4 B4 §1 gate flip, desk → hand (first seen 8 s in, once the space and the hero card are up): seen lying flat for 0.25 s — the recognition takes off on the desk's path (tilt 0° ≤ 45°)"},
+  {"fromSeconds": 8.25, "toSeconds": 8.35, "position": [0, 1.30, -0.62], "toPosition": [0.03, 1.40, -0.58], "eulerDeg": [0, 0, 0], "toEulerDeg": [65, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.292,
+   "note": "2 snatched up in 0.1 s: the desk gate leaves the desk 0.15 s later and the presence gate says carrying ≈ 0.2 s after take-off"},
+  {"fromSeconds": 8.35, "toSeconds": 30.0, "position": [0.03, 1.40, -0.58], "toPosition": [0.05, 1.41, -0.56], "eulerDeg": [65, 0, 0], "toEulerDeg": [58, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 2.0, "surfaceY": 1.292,
+   "note": "3 held in the hand: the closure falls back to today's unfold (the outline was the desk's), logged as a fallback"}
+]

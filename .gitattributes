@@ -1,0 +1,11 @@
+* text=auto
+*.sh text eol=lf
+*.swift text eol=lf
+*.referenceobject binary
+*.usdz binary
+*.hdr binary
+*.png binary
+*.jpg binary
+*.gif binary
+*.mp4 binary
+*.pcm binary

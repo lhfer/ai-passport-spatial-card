@@ -1,0 +1,12 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 8.0, "position": [0, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "note": "v4 B1 stills: 1 on the desk (1.30 m, in the simulator camera's view): the ribbon recognition, the in-place reveal, the gallery"},
+  {"fromSeconds": 8.0, "toSeconds": 8.6, "position": [0, 1.30, -0.62], "toPosition": [0.03, 1.42, -0.60], "eulerDeg": [0, 0, 0], "toEulerDeg": [60, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 4.0, "surfaceY": 1.292,
+   "note": "2 picked up, tilting to 60 deg: the pick-up morph onto the hinge, the hand deck rises"},
+  {"fromSeconds": 8.6, "toSeconds": 14.0, "position": [0.03, 1.42, -0.60], "eulerDeg": [60, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 2.0, "surfaceY": 1.292,
+   "note": "3 held in the hand (the hand-form still)"},
+  {"fromSeconds": 14.0, "toSeconds": 14.6, "position": [0.03, 1.42, -0.60], "toPosition": [0.05, 1.30, -0.60], "eulerDeg": [60, 0, 0], "toEulerDeg": [0, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 2.0, "surfaceY": 1.292,
+   "note": "4 put back down flat"},
+  {"fromSeconds": 14.6, "toSeconds": 30.0, "position": [0.05, 1.30, -0.60], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "note": "5 on the desk again: the settle, the deck blooms back into the gallery (the gallery-after-put-down still)"}
+]

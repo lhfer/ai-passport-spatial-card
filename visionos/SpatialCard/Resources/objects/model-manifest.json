@@ -1,0 +1,19 @@
+{
+  "file": "AI-Passport-Smoked-Vibe-extended.referenceobject",
+  "bytes": 7945904,
+  "sha256": "2679a538716066e37ba37e4229fc7dd614f9565fcb2ba0955fdb417c4929454c",
+  "training_mode": "extended",
+  "viewing_angles": "all",
+  "license": "MIT",
+  "privacy": "Embedded USDZ and AppleDouble metadata removed; model payloads unchanged.",
+  "model_payload_sha256": {
+    "tracker.mlmodelc/weights/weight.bin": "21782940f56dee927ceffa5d89ef5a6b5ce4547ae8d6ddfc3484afa71c6be728",
+    "tracker.mlmodelc/model.mil": "7ce8a312665c060c9ff8b89caa8cfade2985e8a0eb6da3dbb8f33d8af0cf4c51",
+    "tracker.mlmodelc/coremldata.bin": "41252ba8902d8b1c81ab590166aee8fbbddd9c9fb834a89a94ebb5b3685de5f7",
+    "tracker.mlmodelc/analytics/coremldata.bin": "54fc7733076cfe7acf1c6da59d6bc0451336f42d061626dde60b20b4ab5ee907",
+    "detector.mlmodelc/weights/weight.bin": "96b2ef4427431aba56ade1982a1b4e42deb0555df606bcb62d15cbc313ad1379",
+    "detector.mlmodelc/model.mil": "88355fa44933af70466293424f81f799cbb24384d1d179b37ba07dc403cd76fd",
+    "detector.mlmodelc/coremldata.bin": "10c86302f50b3e53cc5d12351a62b276ddfe3e995af73f7089aaa78f4d67bdbb",
+    "detector.mlmodelc/analytics/coremldata.bin": "1ae47c8c5ac219574099dd131f401aa7f1656726f87a3addf198d77b882674e6"
+  }
+}

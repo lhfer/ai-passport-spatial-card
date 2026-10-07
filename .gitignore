@@ -1,0 +1,46 @@
+# Local state and credentials
+.env
+.env.*
+!.env.example
+*.local.json
+*.local.yml
+*.local.yaml
+*.pem
+*.key
+*.p12
+*.p8
+*.mobileprovision
+*.provisionprofile
+*.log
+hub/data/*
+!hub/data/.gitkeep
+firmware/backups/
+
+# Dependencies, generated projects, builds and caches
+node_modules/
+dist/
+build/
+build-host/
+build-*/
+.build/
+.pio/
+managed_components/
+sdkconfig
+sdkconfig.old
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+.swiftpm/
+*.xcuserstate
+__pycache__/
+*.pyc
+.DS_Store
+._*
+.claude/
+.codex/
+.worktrees/
+.vscode/
+assets/worlds/raw/
+
+# The sanitized Extended reference object is intentionally versioned.

@@ -1,0 +1,17 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 13.5, "position": [0, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "left", "position": [-0.35, 1.20, -0.30]},
+   "note": "v4 B4 §2 a real pick-up: 1 on the desk — the recognition, the reveal, the gallery; the hand 45 cm away, no keys"},
+  {"fromSeconds": 13.5, "toSeconds": 14.0, "position": [0, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "left", "position": [-0.35, 1.20, -0.30], "toPosition": [-0.05, 1.335, -0.60]},
+   "note": "2 the hand reaches for the passport (to 6 cm)"},
+  {"fromSeconds": 14.0, "toSeconds": 14.7, "position": [0, 1.30, -0.62], "tracked": false, "source": "object", "rateHz": 30, "surfaceY": 1.292,
+   "hand": {"side": "left", "position": [-0.05, 1.335, -0.60], "toPosition": [-0.04, 1.55, -0.45]},
+   "note": "3 grabbed and lifted toward the face, the camera loses it: the hand rises 21 cm and gets 26 cm off where it lay within 0.7 s (expect [pickup] a pick-up, then [reveal] pick-up fold)"},
+  {"fromSeconds": 14.7, "toSeconds": 16.5, "position": [0, 1.30, -0.62], "tracked": false, "source": "object", "rateHz": 30, "surfaceY": 1.292,
+   "hand": {"side": "left", "position": [-0.04, 1.55, -0.45]},
+   "note": "4 still lost, held up"},
+  {"fromSeconds": 16.5, "toSeconds": 26.0, "position": [-0.02, 1.54, -0.47], "toPosition": [-0.01, 1.545, -0.465], "eulerDeg": [62, 0, 0], "toEulerDeg": [58, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 2.0, "surfaceY": 1.292,
+   "hand": {"side": "left", "position": [-0.04, 1.55, -0.45]},
+   "note": "5 found again in the hand, 29 cm from where it lay, tilted 62° (expect [reveal] pick-up unfold → hand (from the point), the hand form)"}
+]

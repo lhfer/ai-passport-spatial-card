@@ -1,0 +1,6 @@
+{
+  "name": "spatial-card-screens",
+  "private": true,
+  "type": "module",
+  "description": "Theme screen designs (SVG generators + shared layout) consumed by hub/tools/render-screens.ts"
+}

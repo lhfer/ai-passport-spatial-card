@@ -1,0 +1,10 @@
+node_modules/
+dist/
+data/profile/
+data/failures/
+data/stats.json
+data/build/
+*.log
+data/probe/
+data/notes.json
+data/covers/

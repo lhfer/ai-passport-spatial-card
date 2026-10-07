@@ -1,0 +1,8 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 20.0, "position": [0, 1.3, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292, "hand": {"side": "right", "position": [0.4, 1.2, -0.3]},
+   "note": "v4 B5 §1 a rehearsal while the desk has lost the passport: 1 on the desk, tracked (the recognition, the gallery)"},
+  {"fromSeconds": 20.0, "toSeconds": 40.0, "position": [0, 1.3, -0.62], "tracked": false, "source": "object", "rateHz": 30, "surfaceY": 1.292, "hand": {"side": "right", "position": [0.4, 1.2, -0.3]},
+   "note": "2 lost for 20 s with no hand near it (held(untracked), the card and the gallery dimmed, the search shimmer from 23 s) — the round-3 state the whole desk ladder ran in; a rehearsal at 28 s plays in it"},
+  {"fromSeconds": 40.0, "toSeconds": 60.0, "position": [0, 1.3, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292, "hand": {"side": "right", "position": [0.4, 1.2, -0.3]},
+   "note": "3 found again where it lay; a rehearsal at 46 s plays tracked, for the comparison"}
+]

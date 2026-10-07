@@ -1,0 +1,17 @@
+[
+  {"atSeconds": 0.5, "line": "{\"t\":\"hello\",\"fw\":\"0.1.0\",\"boot\":7,\"mode\":\"ar\",\"theme\":\"base\",\"stats\":{\"followers\":4313,\"likes\":44000,\"notes\":128,\"delta\":0,\"ts\":NOW},\"battery\":{\"soc\":88,\"mv\":4060},\"ble\":{\"connected\":true},\"heap\":181240}"},
+  {"atSeconds": 6.5, "line": "{\"t\":\"button\",\"btn\":\"down\",\"ev\":\"click\"}"},
+  {"atSeconds": 8.0, "line": "{\"t\":\"button\",\"btn\":\"down\",\"ev\":\"click\"}"},
+  {"atSeconds": 9.0, "line": "{\"t\":\"button\",\"btn\":\"up\",\"ev\":\"click\"}"},
+  {"atSeconds": 11.0, "line": "{\"t\":\"will_change\",\"id\":\"w3\",\"kind\":\"theme\",\"theme\":\"neon-city\",\"region\":[0,0,240,320]}"},
+  {"atSeconds": 11.4, "line": "{\"t\":\"changed\",\"id\":\"w3\",\"theme\":\"neon-city\"}"},
+  {"atSeconds": 13.0, "line": "{\"t\":\"stats\",\"followers\":4318,\"likes\":44012,\"notes\":128,\"delta\":5,\"ts\":NOW}"},
+  {"atSeconds": 13.2, "line": "{\"t\":\"celebrate\",\"delta\":5,\"followers\":4323}"},
+  {"atSeconds": 15.0, "line": "{\"t\":\"battery\",\"soc\":87}"},
+  {"atSeconds": 17.0, "line": "{\"t\":\"cmd\",\"c\":\"replay\"}"},
+  {"atSeconds": 23.0, "line": "{\"t\":\"will_change\",\"id\":\"w4\",\"kind\":\"stat\",\"theme\":\"neon-city\",\"region\":[0,272,240,48]}"},
+  {"atSeconds": 23.2, "line": "{\"t\":\"changed\",\"id\":\"w4\",\"theme\":\"neon-city\"}"},
+  {"atSeconds": 24.0, "line": "{\"t\":\"cmd\",\"c\":\"celebrate\",\"arg\":3}"},
+  {"atSeconds": 27.0, "line": "{\"t\":\"button\",\"btn\":\"ok\",\"ev\":\"long\"}"},
+  {"atSeconds": 28.0, "line": "{\"t\":\"nonsense\",\"x\":1}"}
+]

@@ -1,0 +1,67 @@
+{
+  "schema": 2,
+  "profile": {
+    "name": "星际访客",
+    "handle": "@SpatialExplorer",
+    "location": "Hello, World",
+    "tags": [
+      "AI 工具",
+      "Vibe Coding",
+      "小游戏"
+    ],
+    "bullets": [
+      "把创意带进空间",
+      "分享你的发现",
+      "做一点有趣的东西",
+      "从一张名片开始"
+    ],
+    "avatar": "avatar.png"
+  },
+  "links": [
+    {
+      "label": "Explore the project",
+      "url": "https://github.com/lhfer/ai-passport-spatial-card"
+    }
+  ],
+  "xhs": {
+    "userId": "YOUR_XHS_USER_ID"
+  },
+  "stats": {
+    "followers": 1024,
+    "likes": 8192,
+    "notes": 10,
+    "updatedAt": "2026-01-01T00:00:00Z",
+    "source": "demo"
+  },
+  "themes": [
+    {
+      "id": "base",
+      "label": "名片",
+      "world": null
+    },
+    {
+      "id": "neon-city",
+      "label": "霓虹雨城",
+      "world": "neon-city"
+    },
+    {
+      "id": "data-nebula",
+      "label": "数据星云",
+      "world": "data-nebula"
+    }
+  ],
+  "device": {
+    "model": "FoloToy AI Passport",
+    "screenPx": [
+      240,
+      320
+    ],
+    "activeAreaMm": [
+      36.72,
+      48.96
+    ],
+    "thicknessMm": 8.5,
+    "cornerRadiusPx": 30,
+    "dynamicStripPx": 48
+  }
+}

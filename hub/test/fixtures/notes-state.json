@@ -1,0 +1,97 @@
+{
+  "user": {
+    "loggedIn": true,
+    "userPageData": {
+      "_rawValue": { "basicInfo": { "nickname": "测试作者", "redId": "FIXTURE" }, "interactions": [{ "type": "follows", "count": "39" }, { "type": "fans", "count": "4345" }, { "type": "interaction", "count": "4.4万" }] }
+    },
+    "notes": {
+      "__v_isRef": true,
+      "_rawValue": [
+        [
+          {
+            "id": "6a11111111111111111111a1",
+            "index": 0,
+            "exposed": true,
+            "xsecToken": "TEST",
+            "noteCard": {
+              "type": "video",
+              "displayTitle": "固定在最前面的一条笔记",
+              "noteId": "6a11111111111111111111a1",
+              "xsecToken": "TEST",
+              "time": 1784308972000,
+              "user": { "nickname": "测试作者", "userId": "6510000000000000000000ff" },
+              "interactInfo": { "liked": false, "likedCount": "168", "sticky": true },
+              "cover": { "width": 1263, "height": 1685, "url": "", "urlPre": "http://sns-webpic-qc.xhscdn.com/202601010000/TEST/spectrum/FIXTURE1!nc_n_webp_prv_1", "urlDefault": "http://sns-webpic-qc.xhscdn.com/202601010000/TEST/spectrum/FIXTURE1!nc_n_webp_mw_1", "infoList": [{ "imageScene": "WB_PRV", "url": "http://sns-webpic-qc.xhscdn.com/202601010000/TEST/spectrum/FIXTURE1!nc_n_webp_prv_1" }] }
+            }
+          },
+          {
+            "id": "6a22222222222222222222b2",
+            "index": 1,
+            "exposed": true,
+            "xsecToken": "TEST",
+            "noteCard": {
+              "type": "normal",
+              "displayTitle": "很受欢迎的一条笔记",
+              "noteId": "6a22222222222222222222b2",
+              "xsecToken": "TEST",
+              "time": 1784208972000,
+              "user": { "nickname": "测试作者", "userId": "6510000000000000000000ff" },
+              "interactInfo": { "liked": true, "likedCount": "12000", "sticky": false },
+              "cover": { "width": 1128, "height": 1242, "url": "", "urlPre": "http://sns-webpic-qc.xhscdn.com/202601010000/TEST/spectrum/FIXTURE2!nc_n_webp_prv_1", "urlDefault": "http://sns-webpic-qc.xhscdn.com/202601010000/TEST/spectrum/FIXTURE2!nc_n_webp_mw_1", "infoList": [] }
+            }
+          },
+          {
+            "id": "6a33333333333333333333c3",
+            "index": 2,
+            "exposed": true,
+            "xsecToken": "TEST",
+            "noteCard": {
+              "type": "normal",
+              "displayTitle": "只有我自己能看到的草稿",
+              "noteId": "6a33333333333333333333c3",
+              "xsecToken": "TEST",
+              "corner": { "type": "private", "content": "仅自己可见" },
+              "user": { "nickname": "测试作者", "userId": "6510000000000000000000ff" },
+              "interactInfo": { "liked": false, "likedCount": "6", "sticky": false },
+              "cover": { "urlPre": "http://sns-webpic-qc.xhscdn.com/202601010000/TEST/spectrum/FIXTURE3!nc_n_webp_prv_1", "urlDefault": "", "infoList": [] }
+            }
+          },
+          {
+            "id": "6a44444444444444444444d4",
+            "index": 3,
+            "exposed": true,
+            "xsecToken": "TEST",
+            "noteCard": {
+              "type": "video",
+              "displayTitle": "刚刚发布还没有人点赞",
+              "noteId": "6a44444444444444444444d4",
+              "xsecToken": "TEST",
+              "user": { "nickname": "测试作者", "userId": "6510000000000000000000ff" },
+              "interactInfo": { "liked": false, "likedCount": "0", "sticky": false },
+              "cover": { "urlPre": "http://sns-webpic-qc.xhscdn.com/202601010000/TEST/spectrum/FIXTURE4!nc_n_webp_prv_1", "urlDefault": "", "infoList": [] }
+            }
+          },
+          {
+            "id": "6a55555555555555555555e5",
+            "index": 4,
+            "exposed": false,
+            "xsecToken": "TEST",
+            "noteCard": {
+              "type": "normal",
+              "displayTitle": "只在 __INITIAL_STATE__ 里出现的一条",
+              "noteId": "6a55555555555555555555e5",
+              "xsecToken": "TEST",
+              "user": { "nickname": "测试作者", "userId": "6510000000000000000000ff" },
+              "interactInfo": { "liked": false, "likedCount": "7", "sticky": false },
+              "cover": { "urlPre": "http://sns-webpic-qc.xhscdn.com/202601010000/TEST/spectrum/FIXTURE5!nc_n_webp_prv_1", "urlDefault": "", "infoList": [] }
+            }
+          }
+        ],
+        [],
+        [],
+        [],
+        []
+      ]
+    }
+  }
+}

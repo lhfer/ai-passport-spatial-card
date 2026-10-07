@@ -1,0 +1,290 @@
+{
+  "id": "paper-valley",
+  "name": "折纸世界",
+  "subtitle": "名片是一本立体书，纸页展开成围绕你的纸艺山谷",
+  "icon": "book.pages",
+  "palette": {
+    "background": "#F4EBDC",
+    "primary": "#C9A87A",
+    "secondary": "#5B8DEF",
+    "highlight": "#FFF8EC",
+    "accent": "#FF9C8A"
+  },
+  "immersion": {
+    "shellOpacity": 1.0,
+    "shellColor": "#F4EBDC"
+  },
+  "entry": {
+    "kind": "unfold",
+    "duration": 3.2
+  },
+  "exit": {
+    "kind": "fold",
+    "duration": 2.6
+  },
+  "audio": {
+    "ambient": "worldPaperAmbient",
+    "entry": "paperFlip",
+    "exit": "paperFlip"
+  },
+  "exitLabel": "合上这本书",
+  "hologramTint": "#C9A87A",
+  "environment": {
+    "hdri": "paper_ibl",
+    "iblIntensity": 0.4,
+    "sky": "paper_sky",
+    "skyTint": "#F4EBDC",
+    "skyRadius": 6
+  },
+  "placements": [
+    {
+      "asset": "paper_ground",
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1
+    },
+    {
+      "asset": "paper_mountain_a",
+      "at": [
+        4.3,
+        0.0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 2.5
+    },
+    {
+      "asset": "paper_mountain_b",
+      "at": [
+        3.15,
+        -2.46,
+        0
+      ],
+      "yaw": 38,
+      "scale": 2.1
+    },
+    {
+      "asset": "paper_mountain_a",
+      "at": [
+        3.14,
+        2.64,
+        0
+      ],
+      "yaw": -40,
+      "scale": 1.9
+    },
+    {
+      "asset": "paper_mountain_b",
+      "at": [
+        0.0,
+        -3.6,
+        0
+      ],
+      "yaw": 90,
+      "scale": 1.6
+    },
+    {
+      "asset": "paper_mountain_a",
+      "at": [
+        -0.32,
+        3.69,
+        0
+      ],
+      "yaw": -95,
+      "scale": 1.5
+    },
+    {
+      "asset": "paper_mountain_b",
+      "at": [
+        -3.11,
+        -2.18,
+        0
+      ],
+      "yaw": 145,
+      "scale": 1.4,
+      "minTier": 1
+    },
+    {
+      "asset": "paper_mountain_a",
+      "at": [
+        -3.38,
+        1.95,
+        0
+      ],
+      "yaw": -150,
+      "scale": 1.3,
+      "minTier": 1
+    },
+    {
+      "asset": "paper_mountain_b",
+      "at": [
+        2.97,
+        -0.42,
+        0
+      ],
+      "yaw": 8,
+      "scale": 0.9,
+      "minTier": 1
+    },
+    {
+      "asset": "paper_mountain_a",
+      "at": [
+        2.66,
+        0.87,
+        0
+      ],
+      "yaw": -18,
+      "scale": 0.8,
+      "minTier": 1
+    },
+    {
+      "asset": "paper_house_a",
+      "at": [
+        1.45,
+        -2.51,
+        0
+      ],
+      "yaw": 40,
+      "scale": 0.75
+    },
+    {
+      "asset": "paper_house_b",
+      "at": [
+        1.16,
+        2.87,
+        0
+      ],
+      "yaw": -43,
+      "scale": 0.65
+    },
+    {
+      "asset": "paper_house_b",
+      "at": [
+        2.83,
+        -1.5,
+        0
+      ],
+      "yaw": 40,
+      "scale": 0.55,
+      "minTier": 1
+    },
+    {
+      "asset": "paper_cloud_a",
+      "at": [
+        2.6,
+        -1.5,
+        1.9
+      ],
+      "yaw": 25,
+      "scale": 1.3
+    },
+    {
+      "asset": "paper_cloud_b",
+      "at": [
+        3.0,
+        0.4,
+        2.15
+      ],
+      "yaw": -8,
+      "scale": 1.1
+    },
+    {
+      "asset": "paper_cloud_a",
+      "at": [
+        2.4,
+        1.9,
+        2.0
+      ],
+      "yaw": -35,
+      "scale": 1.0
+    },
+    {
+      "asset": "paper_cloud_b",
+      "at": [
+        -2.0,
+        2.4,
+        2.1
+      ],
+      "yaw": -130,
+      "scale": 0.9,
+      "minTier": 1
+    },
+    {
+      "asset": "paper_sun",
+      "at": [
+        3.8,
+        1.2,
+        2.7
+      ],
+      "yaw": -15,
+      "scale": 1.4
+    }
+  ],
+  "scatters": [
+    {
+      "asset": "paper_tree_a",
+      "count": 16,
+      "radius": [
+        2.4,
+        3.8
+      ],
+      "angle": [
+        -175,
+        175
+      ],
+      "scale": [
+        0.45,
+        0.85
+      ],
+      "y": 0,
+      "randomYaw": true,
+      "seed": 3
+    },
+    {
+      "asset": "paper_tree_b",
+      "count": 12,
+      "radius": [
+        2.6,
+        4.0
+      ],
+      "angle": [
+        -175,
+        175
+      ],
+      "scale": [
+        0.5,
+        0.95
+      ],
+      "y": 0,
+      "randomYaw": true,
+      "seed": 9
+    }
+  ],
+  "fog": [
+    {
+      "distance": 4.6,
+      "height": 7,
+      "color": "#F4EBDC",
+      "opacity": 0.14
+    }
+  ],
+  "extraAssets": [
+    "paper_mountain_a",
+    "paper_mountain_b",
+    "paper_tree_a",
+    "paper_tree_b",
+    "paper_windmill",
+    "paper_windmill_blades",
+    "paper_house_a",
+    "paper_house_b",
+    "paper_track",
+    "paper_train_engine",
+    "paper_train_car",
+    "paper_bird_body",
+    "paper_bird_wing"
+  ]
+}

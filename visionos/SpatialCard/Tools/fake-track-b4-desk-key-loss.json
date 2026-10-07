@@ -1,0 +1,20 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 11.5, "position": [0, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.20, -0.30]},
+   "note": "v4 B4 §2 a key pressed on the desk (with fake-device-b4-desk-keys.json): 1 on the desk — the recognition, the reveal, the gallery; the hand 50 cm away"},
+  {"fromSeconds": 11.5, "toSeconds": 12.0, "position": [0, 1.30, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.20, -0.30], "toPosition": [0.10, 1.34, -0.60]},
+   "note": "2 the hand comes to the keys (from 50 cm to 10 cm off the screen centre)"},
+  {"fromSeconds": 12.0, "toSeconds": 13.5, "position": [0, 1.30, -0.62], "tracked": false, "source": "object", "rateHz": 30, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.10, 1.34, -0.60], "toPosition": [0.11, 1.345, -0.60]},
+   "note": "3 the camera loses the passport under the pressing hand (keys every 0.3 s), the hand stays on it (expect [pickup] reach, no fold — B2 folded here at 0.5 s)"},
+  {"fromSeconds": 13.5, "toSeconds": 14.1, "position": [0, 1.30, -0.62], "tracked": false, "source": "object", "rateHz": 30, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.11, 1.345, -0.60], "toPosition": [0.40, 1.40, -0.35]},
+   "note": "4 the hand goes back (+30 cm within 0.6 s, inside the key's 1.5 s: expect [pickup] not a pick-up … a key)"},
+  {"fromSeconds": 14.1, "toSeconds": 16.5, "position": [0, 1.30, -0.62], "tracked": false, "source": "object", "rateHz": 30, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.40, -0.35]},
+   "note": "5 still lost, the hand away"},
+  {"fromSeconds": 16.5, "toSeconds": 26.0, "position": [0.005, 1.30, -0.618], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292,
+   "hand": {"side": "right", "position": [0.40, 1.40, -0.35]},
+   "note": "6 found again where it lay (expect [pickup] the hold ended … the card brightens where it stood, and no fold anywhere)"}
+]

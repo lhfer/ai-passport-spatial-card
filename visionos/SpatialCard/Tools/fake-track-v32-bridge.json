@@ -1,0 +1,27 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 3.0, "position": [0, 1.05, -0.6], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.042,
+   "note": "1 desk: flat and still, no hand near it (expect the scan, the cinematic and [notes] fan out 10 cards)"},
+
+  {"fromSeconds": 3.0, "toSeconds": 3.6, "position": [0, 1.05, -0.6], "toPosition": [0.05, 1.22, -0.62],
+   "eulerDeg": [0, 0, 0], "toEulerDeg": [62, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 5.0, "surfaceY": 1.042,
+   "hand": {"side": "left", "position": [0, 1.02, -0.6], "toPosition": [0.05, 1.19, -0.62]},
+   "note": "2 picked up to 62 deg, the left wrist 3 cm under the device (the bridge learns T_hand->device here)"},
+  {"fromSeconds": 3.6, "toSeconds": 6.0, "position": [0.05, 1.22, -0.62], "toPosition": [-0.05, 1.23, -0.62],
+   "eulerDeg": [62, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "hand": {"side": "left", "position": [0.05, 1.19, -0.62], "toPosition": [-0.05, 1.20, -0.62]},
+   "note": "3 carried in the hand, object tracked: the offset is low-passed over 2.4 s"},
+
+  {"fromSeconds": 6.0, "toSeconds": 7.5, "position": [-0.05, 1.23, -0.62], "toPosition": [0.4, 1.25, -0.62],
+   "eulerDeg": [62, 0, 0], "toEulerDeg": [58, 0, 0], "tracked": false, "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "hand": {"side": "left", "position": [-0.05, 1.20, -0.62], "toPosition": [0.4, 1.22, -0.62]},
+   "note": "4 THE LOSS: 1.5 s of untracked object while the hand keeps moving 0.3 m/s (expect [hand] bridge on (left, 0.1x s after loss), Sigma src=hand bridged=, NO held(untracked))"},
+
+  {"fromSeconds": 7.5, "toSeconds": 10.0, "position": [0.4, 1.25, -0.62], "toPosition": [0.3, 1.24, -0.6],
+   "eulerDeg": [58, 0, 0], "toEulerDeg": [60, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "hand": {"side": "left", "position": [0.4, 1.22, -0.62], "toPosition": [0.3, 1.21, -0.6]},
+   "note": "5 the object is back (expect [hand] bridge off (object back, 1.5 s) and a 0.25 s hand-over, no relocation)"},
+  {"fromSeconds": 10.0, "toSeconds": 20.0, "position": [0.3, 1.24, -0.6], "toPosition": [0.22, 1.25, -0.58],
+   "eulerDeg": [60, 0, 0], "toEulerDeg": [58, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "hand": {"side": "left", "position": [0.3, 1.21, -0.6], "toPosition": [0.22, 1.22, -0.58]},
+   "note": "6 held in the hand past the end of the run (--exit-after 16 tears down at 16 s; the script runs to 20 s so it never runs out under the teardown)"}
+]

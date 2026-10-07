@@ -1,0 +1,6 @@
+[
+  {
+    "atSeconds": 0.5,
+    "line": "{\"t\":\"hello\",\"fw\":\"0.2.1\",\"boot\":1,\"mode\":\"ar\",\"theme\":\"base\",\"stats\":{\"followers\":1024,\"likes\":8192,\"notes\":10,\"delta\":0,\"ts\":0},\"battery\":{\"soc\":88,\"mv\":4060},\"ble\":{\"connected\":true},\"heap\":181240,\"backlight\":100}"
+  }
+]

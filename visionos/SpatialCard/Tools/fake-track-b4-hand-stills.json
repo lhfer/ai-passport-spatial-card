@@ -1,0 +1,4 @@
+[
+  {"fromSeconds": 1.0, "toSeconds": 40.0, "position": [0.0, 1.38, -0.50], "toPosition": [0.01, 1.385, -0.495], "eulerDeg": [60, 0, 0], "toEulerDeg": [58, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 1.0, "surfaceY": 1.292,
+   "note": "v4 B4 stills / video: the passport in the hand the whole time, 60° toward the eyes, in the simulator camera's view (with fake-device-b4-hand-summon.json: long OK 9 s collapses into the gold point, OK 12.5 s summons the card)"}
+]

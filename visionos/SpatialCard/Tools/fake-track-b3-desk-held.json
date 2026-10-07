@@ -1,0 +1,5 @@
+[
+  {"fromSeconds": 0, "toSeconds": 24, "position": [0, 1.3, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292, "hand": {"side": "right", "position": [0.4, 1.2, -0.3]}, "note": "v4 B3 §1 (with fake-device-b3-desk-ok.json): on the desk; OK at 14 s with nothing highlighted is DOWN (the first note lifts, ♥ on the strip 0.4 s later), DOWN 15, UP 16; the highlight lapses at 24 s"},
+  {"fromSeconds": 24, "toSeconds": 28, "position": [0, 1.3, -0.62], "source": "object", "rateHz": 30, "tracked": false, "surfaceY": 1.292, "hand": {"side": "right", "position": [0.4, 1.2, -0.3]}, "note": "2 lost for 4 s, the hand 50 cm away: held(untracked), no pick-up fold. OK at 26 s = DOWN again (a lost card on the desk), logged as held"},
+  {"fromSeconds": 28, "toSeconds": 36, "position": [0, 1.3, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292, "hand": {"side": "right", "position": [0.4, 1.2, -0.3]}, "note": "3 found again where it lay"}
+]

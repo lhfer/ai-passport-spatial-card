@@ -1,0 +1,12 @@
+[
+  {
+    "fromSeconds": 0.0,
+    "toSeconds": 8.0,
+    "position": [0, 1.05, -0.6],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 0.5,
+    "surfaceY": 1.042,
+    "note": "V3-2a2 S1 (plan 7.1): flat and still on the desk for the whole run, so the first detection plays the full 1.2 s box scan and the ink cinematic starts at the convergence beat and not before. NOTE: the plan's objectOffset [0, 0.0026, 0] is deliberately left out — it is the Y-thin scan box's half thickness, and writing ANY objectOffset overrides the frame --fake-box implies (see FakeTrackScript.objectToScreen), which on the Z-thin headset box the plan also mandates turns the device 90 deg and reads as 'in a hand'"
+  }
+]

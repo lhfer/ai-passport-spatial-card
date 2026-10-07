@@ -1,0 +1,18 @@
+[
+  {"atSeconds": 0.5, "line": "{\"t\":\"hello\",\"fw\":\"0.2.1\",\"boot\":7,\"mode\":\"ar\",\"theme\":\"base\",\"stats\":{\"followers\":4401,\"likes\":44000,\"notes\":128,\"delta\":0,\"ts\":NOW},\"battery\":{\"soc\":88,\"mv\":4060},\"ble\":{\"connected\":true},\"heap\":181240,\"backlight\":85}"},
+  {"atSeconds": 14, "line": "{\"t\":\"cmd\",\"c\":\"perf\"}"},
+  {"atSeconds": 20, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"worlds=on\"}"},
+  {"atSeconds": 26, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"worlds=off cones=off\"}"},
+  {"atSeconds": 32, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"cones=on well=off\"}"},
+  {"atSeconds": 38, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"well=on gallery-glass=off\"}"},
+  {"atSeconds": 44, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"gallery-glass=on gallery=off\"}"},
+  {"atSeconds": 50, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"gallery=on twinkle=off card-particles=off rig-dust=off trails=off\"}"},
+  {"atSeconds": 56, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"twinkle=on card-particles=on rig-dust=on trails=on material=placeholder\"}"},
+  {"atSeconds": 62, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"material=blur\"}"},
+  {"atSeconds": 70, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"material=plain desk=off rays=off\"}"},
+  {"atSeconds": 76, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"reset\"}"},
+  {"atSeconds": 82, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"all=off\"}"},
+  {"atSeconds": 88, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"reset\"}"},
+  {"atSeconds": 91, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"cones=off\"}"},
+  {"atSeconds": 94, "line": "{\"t\":\"cmd\",\"c\":\"perf\",\"arg\":\"reset\"}"}
+]

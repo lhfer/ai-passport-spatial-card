@@ -1,0 +1,3 @@
+Drop the Create ML `.referenceobject` here (工作包 G 混合跟踪). See README → 混合跟踪.
+This folder is a folder reference in project.yml, so anything in it keeps its path in the app bundle;
+the app takes the first `*.referenceobject` it finds (sorted by name), and runs image-only when there is none.

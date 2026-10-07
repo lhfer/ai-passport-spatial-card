@@ -1,0 +1,6 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 22.0, "position": [0, 1.3, -0.62], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.292, "hand": {"side": "right", "position": [0.4, 1.2, -0.3]},
+   "note": "v4 B5 §4 round 3's way into the nebula: on the desk, tracked (the recognition, the gallery, both worlds prebuilt)"},
+  {"fromSeconds": 22.0, "toSeconds": 80.0, "position": [0, 1.3, -0.62], "tracked": false, "source": "object", "rateHz": 30, "surfaceY": 1.292, "hand": {"side": "right", "position": [0.4, 1.2, -0.3]},
+   "note": "2 lost from 22 s (held(untracked), the dim, the search shimmer from 25 s); the keys enter data-nebula at 30 s from that state, as round 3 did"}
+]

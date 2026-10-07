@@ -1,0 +1,12 @@
+[
+  {
+    "fromSeconds": 6.0,
+    "toSeconds": 30.0,
+    "position": [0, 1.30, -0.62],
+    "source": "object",
+    "rateHz": 30,
+    "jitterMm": 0.5,
+    "surfaceY": 1.292,
+    "note": "v4 B1 recognition with the materials ready: nothing is seen for the first 6 s (the A1 preload takes 3-5 s in the simulator), then the passport lies flat and still on a desk at 1.30 m, 0.62 m ahead. The first recognition is then the intended one: [v4] card style → a1-magic before the recognition starts, [v4] reveal (style a1-magic), and [perf] v4 recognition + reveal without the preload's shader compiles in its window. Used for the report's recording and for the second recognition perf number."
+  }
+]

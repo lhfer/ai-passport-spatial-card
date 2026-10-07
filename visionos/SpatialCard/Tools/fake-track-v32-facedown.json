@@ -1,0 +1,38 @@
+[
+  {"fromSeconds": 0.0, "toSeconds": 3.0, "position": [0, 1.05, -0.6], "source": "object", "rateHz": 30, "jitterMm": 0.5, "surfaceY": 1.042,
+   "note": "1 desk: flat and still (expect the box scan, the cinematic and [notes] fan out 10 cards)"},
+
+  {"fromSeconds": 3.0, "toSeconds": 3.6, "position": [0, 1.05, -0.6], "toPosition": [0.03, 1.20, -0.63],
+   "eulerDeg": [0, 0, 0], "toEulerDeg": [60, 0, 0], "source": "object", "rateHz": 30, "jitterMm": 5.0, "surfaceY": 1.042,
+   "note": "2 picked up to 60 deg (expect the pick-up morph and the hand deck)"},
+  {"fromSeconds": 3.6, "toSeconds": 5.0, "position": [0.03, 1.20, -0.63], "eulerDeg": [60, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "3 held at 60 deg: well under the 120 deg the anticipation starts at"},
+
+  {"fromSeconds": 5.0, "toSeconds": 5.4, "position": [0.03, 1.20, -0.63], "eulerDeg": [60, 0, 0], "toEulerDeg": [130, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "4 turned to 130 deg (expect [gesture] face down: anticipation (tilt 121 deg) on the way past 120)"},
+  {"fromSeconds": 5.4, "toSeconds": 5.9, "position": [0.03, 1.20, -0.63], "eulerDeg": [130, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "5 held 0.5 s at 130 deg: gathered, but 130 is not the 150 the fold wants"},
+  {"fromSeconds": 5.9, "toSeconds": 6.4, "position": [0.03, 1.20, -0.63], "eulerDeg": [130, 0, 0], "toEulerDeg": [60, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "6 turned back to 60 deg (expect [gesture] anticipation cancelled and the deck back in the hand)"},
+  {"fromSeconds": 6.4, "toSeconds": 7.0, "position": [0.03, 1.20, -0.63], "eulerDeg": [60, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "7 held again: the card is back at full opacity"},
+
+  {"fromSeconds": 7.0, "toSeconds": 7.5, "position": [0.03, 1.20, -0.63], "eulerDeg": [60, 0, 0], "toEulerDeg": [170, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "8 turned right over to 170 deg (anticipation again, and this time the fold's 0.8 s dwell starts)"},
+  {"fromSeconds": 7.5, "toSeconds": 9.0, "position": [0.03, 1.20, -0.63], "eulerDeg": [170, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "9 held face down 1.5 s (expect [gesture] face down 0.8 s -> dismiss, the deck tuck and the fold)"},
+
+  {"fromSeconds": 9.0, "toSeconds": 9.5, "position": [0.03, 1.20, -0.63], "eulerDeg": [170, 0, 0], "toEulerDeg": [60, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "10 turned back up: the card deliberately does NOT come back (OK does)"},
+  {"fromSeconds": 9.5, "toSeconds": 16.0, "position": [0.03, 1.20, -0.63], "eulerDeg": [60, 0, 0],
+   "source": "object", "rateHz": 30, "jitterMm": 3.0, "surfaceY": 1.042,
+   "note": "11 held in the hand to the end (OK at 11 s: expect [reveal] box scan (summon, 0.6 s) -> unfold -> deck rises)"}
+]

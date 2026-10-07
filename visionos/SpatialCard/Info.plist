@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>zh-Hans</string>
+	<key>CFBundleDisplayName</key>
+	<string>空间名片</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<!-- 与同一局域网里的 Mac Hub 建立明文 ws:// 连接（ws://<mac>.local:8787/vp），不放开任意 HTTP。 -->
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>空间名片通过蓝牙连接桌上的 AI Passport，接收按键和粉丝数据，并在进入世界时切换它的屏幕。</string>
+	<key>NSHandsTrackingUsageDescription</key>
+	<string>空间名片在物体跟踪短暂丢失时，用手的位置把名片继续拿在你手里，不让它卡在半空。</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>空间名片需要访问本地网络，连接同一 Wi-Fi 下 Mac 上的「空间名片 Hub」，在 AI Passport 没插 USB 时接收粉丝数、庆祝和导演指令。</string>
+	<key>NSWorldSensingUsageDescription</key>
+	<string>空间名片需要识别桌面上的 AI Passport 屏幕，才能在它上方显示全息名片。</string>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationPreferredDefaultSceneSessionRole</key>
+		<string>UISceneSessionRoleImmersiveSpaceApplication</string>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<true/>
+		<key>UISceneConfigurations</key>
+		<dict/>
+	</dict>
+</dict>
+</plist>
